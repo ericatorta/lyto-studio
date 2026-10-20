@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy & cookies · Lyto</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#0E1116">
+<link rel="canonical" href="https://lytostudio.com/privacy.html">
+<style>
+@font-face{font-family:'Poppins';font-weight:400;font-display:swap;src:url(assets/fonts/Poppins-Regular.ttf) format('truetype')}
+@font-face{font-family:'Poppins';font-weight:500;font-display:swap;src:url(assets/fonts/Poppins-Medium.ttf) format('truetype')}
+@font-face{font-family:'Poppins';font-weight:700;font-display:swap;src:url(assets/fonts/Poppins-Bold.ttf) format('truetype')}
+@font-face{font-family:'Din';font-weight:700;font-display:swap;src:local('DIN Condensed Bold'),local('DINCondensed-Bold'),url(assets/fonts/din.woff2) format('woff2')}
+
+:root{
+  --bg1:#1E2430; --bg2:#0E1116; --card:#161B24; --card2:#1B2230;
+  --fg:#FFFFFF; --mute:rgba(255,255,255,.66); --line:rgba(56,189,248,.22); --line2:rgba(255,255,255,.09);
+  --acc:#38BDF8; --hl:#0284C7; --ok:#4ADE80;
+  --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,sans-serif;color:var(--fg);line-height:1.6;-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;background-color:var(--bg2);
+  background:
+    linear-gradient(rgba(56,189,248,.035) 1px,transparent 1px) 0 0/56px 56px,
+    linear-gradient(90deg,rgba(56,189,248,.035) 1px,transparent 1px) 0 0/56px 56px,
+    radial-gradient(1000px 760px at 12% 0%,rgba(2,132,199,.40),transparent 70%),
+    radial-gradient(900px 900px at 100% 60%,rgba(2,132,199,.14),transparent 70%),
+    linear-gradient(180deg,var(--bg1) 0,var(--bg2) 900px) var(--bg2)}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%;height:auto}
+
+/* bilingual: EN by default, html.it shows Italian */
+html:not(.it) .it, html.it .en{display:none}
+
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+.kicker{font-family:var(--mono);font-size:13px;color:var(--acc);letter-spacing:.06em;text-transform:uppercase;
+  display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);padding:6px 12px;border-radius:999px}
+.kicker::before{content:'>';opacity:.7}
+h1,h2,h3{font-family:'Din',Impact,sans-serif;font-weight:700;text-transform:uppercase;line-height:.95}
+h2{font-size:clamp(42px,6.4vw,72px);margin:18px 0 16px;max-width:860px}
+mark{background:var(--hl);color:#fff;padding:0 .14em;border-radius:.08em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.lead{color:var(--mute);font-size:18px;max-width:640px}
+
+/* ---- buttons ---- */
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:15px;border-radius:12px;
+  padding:14px 22px;transition:transform .15s,background .15s,border-color .15s;white-space:nowrap;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn-blue{background:var(--hl);color:#fff;box-shadow:0 10px 30px rgba(2,132,199,.35)}
+.btn-blue:hover{background:#0396e0}
+.btn-ghost{border:1px solid rgba(255,255,255,.25)}
+.btn-ghost:hover{border-color:var(--acc)}
+.btn-sm{padding:9px 14px;font-size:14px;border-radius:10px}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* ---- nav ---- */
+nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  background:rgba(14,17,22,.66);border-bottom:1px solid var(--line2)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:14px}
+.handle{font-family:var(--mono);font-size:18px;font-weight:600}
+.handle .p{color:var(--acc)}
+.cur{display:inline-block;width:.55em;height:1.05em;background:var(--acc);vertical-align:-.15em;margin-left:2px;
+  animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.menu{display:flex;gap:26px;font-size:14px;color:var(--mute)}
+.menu a:hover{color:#fff}
+.nav-r{display:flex;align-items:center;gap:10px}
+.lang{display:flex;border:1px solid var(--line2);border-radius:10px;padding:3px}
+.lang button{font:600 12px var(--mono);color:var(--mute);background:none;border:0;padding:6px 9px;border-radius:7px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:#fff;color:var(--bg2)}
+
+/* ---- hero ---- */
+.hero{padding:76px 0 90px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(58px,8.6vw,112px);margin:22px 0 22px}
+.hero .lead{font-size:19px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.trust{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:28px;font-size:14px;color:var(--mute)}
+.trust span::before{content:'✓ ';color:var(--ok);font-weight:700}
+
+/* terminal window */
+.term{border-radius:16px;background:rgba(14,17,22,.82);border:1px solid var(--line);
+  box-shadow:0 40px 80px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.03) inset;overflow:hidden}
+.term .bar{display:flex;align-items:center;gap:7px;padding:12px 14px;border-bottom:1px solid var(--line2)}
+.term .bar i{width:11px;height:11px;border-radius:50%;background:#3a4252}
+.term .bar i:nth-child(1){background:#FF5F57}.term .bar i:nth-child(2){background:#FEBC2E}.term .bar i:nth-child(3){background:#28C840}
+.term .bar span{margin-left:auto;font:12px var(--mono);color:var(--mute)}
+.term pre{font:14px/1.85 var(--mono);padding:18px 20px 22px;white-space:pre-wrap;color:#cfd8e3;min-height:330px}
+.term .t{color:rgba(255,255,255,.38)} .term .a{color:var(--acc)} .term .g{color:var(--ok)} .term .w{color:#fff}
+.term-note{font:12px var(--mono);color:var(--mute);margin-top:10px;text-align:right}
+
+/* ---- pains ---- */
+.pains{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
+.pain{border-radius:18px;padding:24px 22px;background:var(--card);border:1px solid var(--line2)}
+.pain .h{font-family:var(--mono);font-size:30px;color:var(--acc);line-height:1}
+.pain h3{font-size:28px;margin:16px 0 8px}
+.pain p{color:var(--mute);font-size:14.5px}
+
+/* ---- services ---- */
+.svcs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:44px}
+.svc{position:relative;border-radius:22px;padding:30px;background:var(--card);border:1px solid var(--line2);
+  transition:border-color .2s}
+.svc:hover{border-color:var(--line)}
+.svc .n{font:13px var(--mono);color:var(--acc)}
+.svc h3{font-size:42px;margin:10px 0 10px}
+.svc p{color:var(--mute);font-size:15.5px;margin-bottom:16px}
+.svc ul{list-style:none;display:grid;gap:7px;font-size:14.5px}
+.svc li{display:flex;gap:10px}
+.svc li::before{content:'→';color:var(--acc);font-family:var(--mono)}
+.svc .badge{position:absolute;top:26px;right:26px;font:600 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;
+  background:var(--hl);color:#fff;padding:5px 9px;border-radius:7px}
+
+/* ---- steps ---- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px;counter-reset:s}
+.step{border-top:2px solid var(--hl);padding-top:22px}
+.step .k{font:13px var(--mono);color:var(--acc)}
+.step h3{font-size:34px;margin:8px 0 8px}
+.step p{color:var(--mute);font-size:15px}
+
+/* ---- pricing ---- */
+.tabs{display:inline-flex;gap:6px;margin-top:34px;padding:5px;border-radius:14px;background:var(--card);border:1px solid var(--line2);flex-wrap:wrap}
+.tabs button{font:600 14px 'Poppins';color:var(--mute);background:none;border:0;border-radius:10px;padding:10px 16px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--hl);color:#fff}
+.plans{display:none;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.plans.on{display:grid}
+.plan{border-radius:22px;padding:28px;background:var(--card);border:1px solid var(--line2);display:flex;flex-direction:column}
+.plan.hot{border-color:rgba(56,189,248,.55);background:linear-gradient(170deg,rgba(2,132,199,.28),var(--card) 60%)}
+.plan .nm{font:600 13px var(--mono);color:var(--acc);text-transform:uppercase;letter-spacing:.05em}
+.plan .pr{font-family:'Din';font-size:64px;line-height:1;margin:14px 0 4px}
+.plan .pr small{font-family:'Poppins';font-size:15px;color:var(--mute);font-weight:400;margin-left:4px}
+.plan .when{font-size:13.5px;color:var(--ok);margin-bottom:16px}
+.plan p{color:var(--mute);font-size:14.5px;margin-bottom:14px}
+.plan ul{list-style:none;display:grid;gap:7px;font-size:14px;margin-bottom:22px}
+.plan li{display:flex;gap:9px}
+.plan li::before{content:'✓';color:var(--acc);font-weight:700}
+.plan .btn{margin-top:auto;justify-content:center}
+.price-note{margin-top:18px;font-size:13.5px;color:var(--mute)}
+
+/* ---- work ---- */
+.work{display:grid;grid-template-columns:1.25fr 1fr;gap:36px;align-items:center;margin-top:44px;
+  border-radius:26px;padding:26px;background:var(--card);border:1px solid var(--line2)}
+.browser{border-radius:12px;overflow:hidden;border:1px solid var(--line2);background:#0b0d11}
+.browser .bar{display:flex;align-items:center;gap:6px;padding:9px 12px;border-bottom:1px solid var(--line2)}
+.browser .bar i{width:9px;height:9px;border-radius:50%;background:#3a4252}
+.browser .bar span{margin:0 auto;font:11.5px var(--mono);color:var(--mute);background:rgba(255,255,255,.05);
+  padding:3px 14px;border-radius:6px}
+.work h3{font-size:44px;margin:8px 0 10px}
+.work p{color:var(--mute);font-size:15.5px;margin-bottom:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chips span{font:12.5px var(--mono);border:1px solid var(--line);color:var(--acc);padding:5px 10px;border-radius:8px}
+
+/* ---- promises ---- */
+.proms{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.prom{border-radius:20px;padding:28px;background:var(--card);border:1px solid var(--line2)}
+.prom .ic{font-size:30px}
+.prom h3{font-size:32px;margin:14px 0 8px}
+.prom p{color:var(--mute);font-size:15px}
+
+/* ---- team ---- */
+.team{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:44px}
+.mate{display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:center;border-radius:22px;padding:22px;
+  background:var(--card);border:1px solid var(--line2)}
+.mate img{width:150px;height:150px;border-radius:16px;object-fit:cover}
+.mate .hd{font:600 15px var(--mono)} .mate .hd b{color:var(--acc);font-weight:600}
+.mate h3{font-size:38px;margin:4px 0 6px}
+.mate p{color:var(--mute);font-size:14.5px;margin-bottom:12px}
+
+/* ---- faq ---- */
+.faq{margin-top:36px;display:grid;gap:10px;max-width:860px}
+details{border-radius:16px;background:var(--card);border:1px solid var(--line2);padding:0 22px}
+summary{cursor:pointer;list-style:none;padding:20px 0;font-weight:600;font-size:16.5px;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';font-family:var(--mono);color:var(--acc);font-size:20px;line-height:1}
+details[open] summary::after{content:'−'}
+details p{color:var(--mute);padding:0 0 20px;font-size:15.5px;max-width:740px}
+
+/* ---- final cta ---- */
+.final{border-radius:30px;padding:60px 40px;text-align:center;
+  background:radial-gradient(600px 300px at 50% 0%,rgba(56,189,248,.35),transparent 70%),linear-gradient(160deg,#0B4F78,#121a26 75%);
+  border:1px solid rgba(56,189,248,.45)}
+.final h2{margin:18px auto 14px}
+.final .lead{margin:0 auto}
+.final .ctas{justify-content:center}
+.dm{font-family:var(--mono);background:rgba(0,0,0,.3);border:1px dashed rgba(56,189,248,.6);padding:2px 8px;border-radius:6px;color:#fff}
+
+.cform{max-width:620px;margin:40px auto 0;text-align:left;display:grid;gap:16px;border-top:1px solid var(--line);padding-top:32px}
+.cform .or{text-align:center;font-family:var(--mono);color:var(--mute);font-size:14px}
+.cform .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cform label{display:grid;gap:6px;font-size:14px;color:var(--mute)}
+.cform input,.cform select,.cform textarea{font:inherit;font-size:16px;color:#fff;background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
+.cform input:focus,.cform select:focus,.cform textarea:focus{outline:2px solid var(--acc);outline-offset:1px}
+.cform select option{background:var(--card)}
+.cform .btn{justify-self:start;border:0;cursor:pointer}
+.cform .fine{font-size:13px;color:var(--mute)}
+.cform .fine a{color:#fff;text-decoration:underline}
+.cform .fmsg:empty{display:none}
+.cform .fmsg{font-family:var(--mono);font-size:14px;color:var(--ok)}
+.cform .fmsg.err{color:#FCA5A5}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+footer{border-top:1px solid var(--line2);padding:30px 0 42px;color:var(--mute);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer .links{display:flex;gap:18px;flex-wrap:wrap}
+footer a:hover{color:#fff}
+footer .legal-f a{text-decoration:underline}
+
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.cur{animation:none}html{scroll-behavior:auto}}
+
+@media (max-width:1000px){
+  .menu{display:none}
+  .hero .wrap{grid-template-columns:1fr}
+  .pains{grid-template-columns:repeat(2,1fr)}
+  .plans.on,.proms{grid-template-columns:1fr}
+  .work,.team{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  section{padding:68px 0}
+  .wrap{padding:0 16px}
+  .hero{padding:44px 0 64px}
+  .svcs,.steps{grid-template-columns:1fr}
+  .pains{grid-template-columns:1fr}
+  .term pre{font-size:12.5px;min-height:0}
+  .svc,.plan,.prom{padding:24px 20px}
+  .svc .badge{position:static;display:inline-block;margin-bottom:10px}
+  .mate{grid-template-columns:96px 1fr;gap:16px;padding:18px}
+  .mate img{width:96px;height:96px}
+  .mate h3{font-size:32px}
+  .final{padding:44px 20px}
+  .cform .row{grid-template-columns:1fr}
+  .nav-cta{display:none}
+  .tabs{display:flex;width:100%}
+  .tabs button{flex:1;padding:10px 8px}
+  .work{padding:16px}
+}
+
+.legal{padding:64px 0 96px}
+.legal .wrap{max-width:780px}
+.legal h1{font-size:clamp(44px,7vw,76px);margin:18px 0 10px}
+.legal h2{font-size:30px;margin:44px 0 10px}
+.legal p,.legal li{color:var(--mute);font-size:15.5px}
+.legal p+p{margin-top:10px}
+.legal ul{padding-left:20px;margin-top:8px;display:grid;gap:6px}
+.legal a{color:#fff;text-decoration:underline}
+.legal .upd{font-family:var(--mono);font-size:13px;color:var(--acc)}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a href="./" class="handle" aria-label="Lyto"><span class="p">&gt;</span> lyto<span class="cur"></span></a>
+    <div class="menu">
+      <a href="./#services"><span class="en">Services</span><span class="it">Servizi</span></a>
+      <a href="./#pricing"><span class="en">Pricing</span><span class="it">Prezzi</span></a>
+      <a href="./#work"><span class="en">Work</span><span class="it">Lavori</span></a>
+      <a href="./#faq">FAQ</a>
+    </div>
+    <div class="nav-r">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="it" aria-pressed="false">IT</button>
+      </div>
+      <a class="btn btn-blue btn-sm nav-cta" href="./#contact"><span class="en">Free consultation</span><span class="it">Consulenza gratuita</span></a>
+    </div>
+  </div>
+</nav>
+
+<main class="legal">
+  <div class="wrap">
+    <span class="kicker">privacy.txt</span>
+
+    <div class="en">
+      <h1>Privacy &amp; <mark>cookies</mark></h1>
+      <p class="upd">Last updated: 18 October 2026</p>
+
+      <h2>Who we are</h2>
+      <p>This website is run by Erica Torta and Abderrahman Lyassi (Lyto), Turin, Italy, who are joint controllers of your personal data. For anything about your data, write to <a href="mailto:hello@lytostudio.com">hello@lytostudio.com</a>.</p>
+
+      <h2>What we collect</h2>
+      <ul>
+        <li><b>Call booking:</b> if you book a call, the details you enter in the Cal.com calendar.</li>
+        <li><b>Contact form:</b> name, email, the service you are interested in and your message.</li>
+        <li><b>Email:</b> what you write to us at hello@lytostudio.com.</li>
+        <li><b>Instagram messages:</b> if you DM @mr.lyto or @ms.lyto, Instagram (Meta) handles that data under its own privacy policy.</li>
+        <li><b>Technical data:</b> our hosting provider keeps standard server logs (IP address, browser, time of the visit) for security.</li>
+      </ul>
+
+      <h2>Why, and on what basis</h2>
+      <p>We use your details only to answer you, prepare a quote and, if you hire us, carry out the project. The legal basis is taking steps at your request before a contract and performing the contract (GDPR art. 6(1)(b)). Server logs rely on our legitimate interest in keeping the site secure (art. 6(1)(f)). We don't send newsletters, and we don't sell or share your data for marketing.</p>
+
+      <h2>Who else handles it</h2>
+      <ul>
+        <li><b>Cloudflare</b>: website hosting and email forwarding.</li>
+        <li><b>Formspree</b>: receives the contact form and forwards it to us by email.</li>
+        <li><b>Cal.com</b>: booking calendar for the free call (name, email, any notes, date and time you choose). It loads only when you click a "book" button, and from then on Cal.com's own <a href="https://cal.com/privacy" target="_blank" rel="noopener">privacy policy</a> applies to what happens in that window.</li>
+      </ul>
+      <p>These providers may process data outside the EU (e.g. in the United States), under the EU-US Data Privacy Framework or the European Commission's standard contractual clauses.</p>
+
+      <h2>How long we keep it</h2>
+      <p>Requests that don't become a project: up to 24 months after our last contact. Clients: for the whole project and then as long as tax and accounting rules require.</p>
+
+      <h2>Your rights</h2>
+      <p>You can ask to see, correct or delete your data, limit or object to how we use it, and receive a copy of it (GDPR arts. 15–22). Just write to <a href="mailto:hello@lytostudio.com">hello@lytostudio.com</a>. You can also complain to the Italian data protection authority, the <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">Garante per la protezione dei dati personali</a>.</p>
+
+      <h2>Cookies</h2>
+      <p>This site uses <b>no cookies</b> for tracking, analytics or advertising, and loads no third-party trackers. The Cal.com booking window is loaded only if you click to book a call. The fonts are hosted on our own server.</p>
+      <p>The only thing we store in your browser is your language choice (EN/IT), saved in <code>localStorage</code> under the name <code>lyto-lang</code>. It is strictly necessary for the feature you asked for, never leaves your device, and you can delete it by clearing your browser's site data. That's why there is no cookie banner.</p>
+      <p>Links to Instagram, TikTok and other sites take you to services with their own cookie and privacy policies.</p>
+
+      <h2>Changes</h2>
+      <p>If we change this page, we'll update the date at the top.</p>
+    </div>
+
+    <div class="it">
+      <h1>Privacy e <mark>cookie</mark></h1>
+      <p class="upd">Ultimo aggiornamento: 18 ottobre 2026</p>
+
+      <h2>Chi siamo</h2>
+      <p>Questo sito è gestito da Erica Torta e Abderrahman Lyassi (Lyto), Torino, contitolari del trattamento dei tuoi dati personali. Per qualsiasi domanda sui tuoi dati scrivi a <a href="mailto:hello@lytostudio.com">hello@lytostudio.com</a>.</p>
+
+      <h2>Quali dati raccogliamo</h2>
+      <ul>
+        <li><b>Prenotazione chiamata:</b> se prenoti una chiamata, i dati che inserisci nel calendario Cal.com.</li>
+        <li><b>Modulo di contatto:</b> nome, email, il servizio che ti interessa e il tuo messaggio.</li>
+        <li><b>Email:</b> quello che ci scrivi a hello@lytostudio.com.</li>
+        <li><b>Messaggi su Instagram:</b> se scrivi in DM a @mr.lyto o @ms.lyto, quei dati li gestisce Instagram (Meta) secondo la sua privacy policy.</li>
+        <li><b>Dati tecnici:</b> il nostro fornitore di hosting conserva i normali log del server (indirizzo IP, browser, ora della visita) per motivi di sicurezza.</li>
+      </ul>
+
+      <h2>Perché e su quale base</h2>
+      <p>Usiamo i tuoi dati solo per risponderti, prepararti un preventivo e, se ci scegli, realizzare il progetto. La base giuridica è l'esecuzione di misure precontrattuali su tua richiesta e del contratto (art. 6.1.b GDPR). I log del server si basano sul nostro legittimo interesse a tenere il sito sicuro (art. 6.1.f). Non mandiamo newsletter e non vendiamo né cediamo i tuoi dati per marketing.</p>
+
+      <h2>Chi altro li tratta</h2>
+      <ul>
+        <li><b>Cloudflare</b>: hosting del sito e inoltro delle email.</li>
+        <li><b>Formspree</b>: riceve il modulo di contatto e ce lo inoltra via email.</li>
+        <li><b>Cal.com</b>: calendario per prenotare la chiamata gratuita (nome, email, eventuali note, giorno e ora scelti). Si carica solo quando premi un pulsante "prenota"; da quel momento, per quello che succede in quella finestra, vale la <a href="https://cal.com/privacy" target="_blank" rel="noopener">privacy policy di Cal.com</a>.</li>
+      </ul>
+      <p>Questi fornitori possono trattare dati fuori dall'UE (per esempio negli Stati Uniti), nel quadro dell'EU-US Data Privacy Framework o delle clausole contrattuali standard della Commissione europea.</p>
+
+      <h2>Per quanto tempo</h2>
+      <p>Richieste che non diventano un progetto: al massimo 24 mesi dall'ultimo contatto. Clienti: per tutta la durata del progetto e poi per il tempo richiesto dalle norme fiscali e contabili.</p>
+
+      <h2>I tuoi diritti</h2>
+      <p>Puoi chiedere di vedere, correggere o cancellare i tuoi dati, limitarne l'uso od opporti, e riceverne una copia (artt. 15–22 GDPR). Basta scrivere a <a href="mailto:hello@lytostudio.com">hello@lytostudio.com</a>. Puoi anche presentare reclamo al <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">Garante per la protezione dei dati personali</a>.</p>
+
+      <h2>Cookie</h2>
+      <p>Questo sito <b>non usa cookie</b> di profilazione, statistica o pubblicità e non carica tracciatori di terze parti. La finestra di prenotazione di Cal.com si carica solo se premi per prenotare una chiamata. I font sono ospitati sul nostro server.</p>
+      <p>L'unica cosa che salviamo nel tuo browser è la lingua che scegli (EN/IT), nel <code>localStorage</code> con il nome <code>lyto-lang</code>. È strettamente necessaria per la funzione che hai chiesto, non esce dal tuo dispositivo e puoi cancellarla svuotando i dati del sito nel browser. Per questo non c'è il banner dei cookie.</p>
+      <p>I link a Instagram, TikTok e altri siti portano a servizi che hanno le proprie policy su cookie e privacy.</p>
+
+      <h2>Modifiche</h2>
+      <p>Se cambiamo questa pagina, aggiorniamo la data in alto.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="handle" style="font-size:16px;color:#fff"><span class="p">&gt;</span> lyto</span>
+    <div class="links">
+      <a href="https://www.instagram.com/mr.lyto/" target="_blank" rel="noopener">@mr.lyto</a>
+      <a href="https://www.instagram.com/ms.lyto/" target="_blank" rel="noopener">@ms.lyto</a>
+      <a href="https://www.instagram.com/the.lytos/" target="_blank" rel="noopener">@the.lytos</a>
+      <a href="https://lyto.online" target="_blank" rel="noopener">lyto.online</a>
+      <a href="mailto:hello@lytostudio.com">hello@lytostudio.com</a>
+    </div>
+    <span class="legal-f">© <span id="y">2026</span> Lyto · Erica Torta &amp; Abderrahman Lyassi · <span class="en">Turin, Italy</span><span class="it">Torino</span> · <a href="privacy.html">Privacy &amp; cookie<span class="en">s</span></a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root = document.documentElement;
+  function setLang(l, save){
+    root.classList.toggle('it', l === 'it');
+    root.lang = l;
+    document.querySelectorAll('.lang button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.lang === l); });
+    document.querySelectorAll('option[data-en]').forEach(function(o){ o.textContent = o.dataset[l]; });
+    if (save) { try { localStorage.setItem('lyto-lang', l); } catch(e){} }
+  }
+  // ?lang= in the link > saved choice > browser language
+  var q = new URLSearchParams(location.search).get('lang'), saved = null;
+  try { saved = localStorage.getItem('lyto-lang'); } catch(e){}
+  var nav = (navigator.language || '').toLowerCase().indexOf('it') === 0 ? 'it' : 'en';
+  setLang(q === 'it' || q === 'en' ? q : (saved || nav), false);
+  document.querySelectorAll('.lang button').forEach(function(b){
+    b.addEventListener('click', function(){ setLang(b.dataset.lang, true); });
+  });
+
+})();
+</script>
+</body>
+</html>
