@@ -4,6 +4,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit, unquote
 import json
+import re
 import xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
 class Page(HTMLParser):
@@ -45,6 +46,12 @@ for p,obj in pages.items():
             if not target:
                 target=Page();target.feed(dest.read_text())
             assert unquote(u.fragment) in target.ids,(p,ref,'missing anchor')
+for css in (ROOT/'assets').glob('*.css'):
+    for ref in re.findall(r'url\(([^)]+)\)', css.read_text()):
+        ref=ref.strip("\"'")
+        if ref.startswith(('data:', 'https:')):continue
+        target=ROOT/ref.lstrip('/') if ref.startswith('/') else css.parent/ref
+        assert target.exists(),(css,ref,'missing CSS asset')
 ET.parse(ROOT/'sitemap.xml')
 assert len(pages)==9
 print(f'PASS: {len(pages)} pages, localized metadata, JSON-LD, local links, fragments, assets and sitemap.')

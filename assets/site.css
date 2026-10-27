@@ -1,7 +1,7 @@
 
-@font-face{font-family:'Poppins';font-weight:400;font-display:swap;src:url(assets/fonts/Poppins-Regular.ttf) format('truetype')}
-@font-face{font-family:'Poppins';font-weight:500;font-display:swap;src:url(assets/fonts/Poppins-Medium.ttf) format('truetype')}
-@font-face{font-family:'Poppins';font-weight:700;font-display:swap;src:url(assets/fonts/Poppins-Bold.ttf) format('truetype')}
+@font-face{font-family:'Poppins';font-weight:400;font-display:swap;src:url(/assets/fonts/Poppins-Regular.ttf) format('truetype')}
+@font-face{font-family:'Poppins';font-weight:500;font-display:swap;src:url(/assets/fonts/Poppins-Medium.ttf) format('truetype')}
+@font-face{font-family:'Poppins';font-weight:700;font-display:swap;src:url(/assets/fonts/Poppins-Bold.ttf) format('truetype')}
 
 :root{
   --bg1:#1E2430; --bg2:#0E1116; --card:#161B24; --card2:#1B2230;
