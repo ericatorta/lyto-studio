@@ -7,7 +7,7 @@
 <meta name="description" content="AI agents, automations and websites for small businesses, from Turin. Fixed price, delivery date in writing, one person to talk to. Free 20-min call.">
 <link rel="canonical" href="https://lytostudio.com/">
 <link rel="alternate" hreflang="en" href="https://lytostudio.com/">
-<link rel="alternate" hreflang="it" href="https://lytostudio.com/?lang=it">
+<link rel="alternate" hreflang="it" href="https://lytostudio.com/it">
 <link rel="alternate" hreflang="x-default" href="https://lytostudio.com/">
 <meta property="og:site_name" content="Lyto Studio">
 <meta property="og:title" content="Lyto Studio · The boring work, done for you">
@@ -191,6 +191,12 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .work p{color:var(--mute);font-size:15.5px;margin-bottom:16px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
 .chips span{font:12.5px var(--mono);border:1px solid var(--line);color:var(--acc);padding:5px 10px;border-radius:8px}
+.ctas-sm{display:flex;flex-wrap:wrap;gap:10px}
+.work + .work{margin-top:20px}
+.work-app{grid-template-columns:1fr 1.25fr}
+.phone{width:min(260px,100%);margin:0 auto;border-radius:34px;border:7px solid #232833;overflow:hidden;background:#0b0d11;
+  box-shadow:0 20px 50px rgba(0,0,0,.45)}
+.phone img{display:block;width:100%;height:auto}
 
 /* ---- promises ---- */
 .proms{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
@@ -241,6 +247,7 @@ details p{color:var(--mute);padding:0 0 20px;font-size:15.5px;max-width:740px}
 .cform .fmsg:empty{display:none}
 .cform .fmsg{font-family:var(--mono);font-size:14px;color:var(--ok)}
 .cform .fmsg.err{color:#FCA5A5}
+.cform .fmsg a{color:#fff;text-decoration:underline}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 footer{border-top:1px solid var(--line2);padding:30px 0 42px;color:var(--mute);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
@@ -257,7 +264,7 @@ footer .legal-f a{text-decoration:underline}
   .hero .wrap{grid-template-columns:1fr}
   .pains{grid-template-columns:repeat(2,1fr)}
   .plans.on,.proms{grid-template-columns:1fr}
-  .work,.team{grid-template-columns:1fr}
+  .work,.work-app,.team{grid-template-columns:1fr}
 }
 @media (max-width:720px){
   section{padding:68px 0}
@@ -547,16 +554,30 @@ footer .legal-f a{text-decoration:underline}
     <h2 class="it">Fatto da <mark>noi</mark></h2>
     <div class="work rv">
       <div class="browser">
-        <div class="bar"><i></i><i></i><i></i><span>upcollectiontorino.com</span></div>
-        <img src="assets/img/work-upcollection.webp" width="1000" height="625" loading="lazy" alt="Up Collection website, home page">
+        <div class="bar"><i></i><i></i><i></i><span>shop.upcollectiontorino.com</span></div>
+        <img src="assets/img/work-upcollection-shop.webp" width="1000" height="625" loading="lazy" alt="Up Collection online shop, home page">
       </div>
       <div>
-        <div class="n" style="font:13px var(--mono);color:var(--acc)">website / shop</div>
+        <div class="n" style="font:13px var(--mono);color:var(--acc)">website + online shop</div>
         <h3>Up Collection</h3>
-        <p class="en">Website for a clothing shop in Turin, open since the '60s: men's and women's collections, Italian and English, WhatsApp, Google Search Console.</p>
-        <p class="it">Sito per un negozio di abbigliamento a Torino, aperto dagli anni '60: collezioni uomo e donna, italiano e inglese, WhatsApp, Google Search Console.</p>
-        <div class="chips"><span>mobile-first</span><span>IT / EN</span><span>WhatsApp</span><span>SEO</span></div>
-        <a class="btn btn-ghost" href="https://upcollectiontorino.com" target="_blank" rel="noopener"><span class="en">Visit the site</span><span class="it">Vedi il sito</span> ↗</a>
+        <p class="en">Website and online shop for a clothing store in Turin, open since the '60s: men's and women's collections, online orders with in-store pickup, a Telegram alert for every new order, Italian and English.</p>
+        <p class="it">Sito e negozio online per un negozio di abbigliamento a Torino, aperto dagli anni '60: collezioni uomo e donna, ordini online con ritiro in negozio, avviso su Telegram a ogni nuovo ordine, italiano e inglese.</p>
+        <div class="chips"><span>e-commerce</span><span>Telegram</span><span>IT / EN</span><span>SEO</span></div>
+        <div class="ctas-sm">
+          <a class="btn btn-ghost btn-sm" href="https://shop.upcollectiontorino.com" target="_blank" rel="noopener"><span class="en">Visit the shop</span><span class="it">Vedi lo shop</span> ↗</a>
+          <a class="btn btn-ghost btn-sm" href="https://upcollectiontorino.com" target="_blank" rel="noopener"><span class="en">Visit the site</span><span class="it">Vedi il sito</span> ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="work work-app rv">
+      <div class="phone"><img src="assets/img/work-billionder.webp" width="450" height="900" loading="lazy" alt="Billionder app, swipe screen"></div>
+      <div>
+        <div class="n" style="font:13px var(--mono);color:var(--acc)">web app</div>
+        <h3>Billionder</h3>
+        <p class="en">A parody app: swipe right to pay a stranger's bill. Our own product, built and online in a few days, then shared all over social media: waiting list, FAQ, Italian and English.</p>
+        <p class="it">Un'app parodia: swipe a destra per pagare la bolletta di uno sconosciuto. Un prodotto nostro, costruito e messo online in pochi giorni, poi condiviso sui social: lista d'attesa, FAQ, italiano e inglese.</p>
+        <div class="chips"><span>web app</span><span>mobile-first</span><span>IT / EN</span></div>
+        <a class="btn btn-ghost btn-sm" href="https://billionder.pages.dev" target="_blank" rel="noopener"><span class="en">Try it</span><span class="it">Provala</span> ↗</a>
       </div>
     </div>
   </div>
@@ -578,8 +599,8 @@ footer .legal-f a{text-decoration:underline}
         <p class="it">Ogni progetto ha una data scritta nel contratto. Se sforiamo noi, sconto del 10%.</p></div>
       <div class="prom rv"><div class="ic">💬</div>
         <h3 class="en">One person</h3><h3 class="it">Un solo referente</h3>
-        <p class="en">You always talk to the same person, on WhatsApp, from day one to delivery.</p>
-        <p class="it">Parli sempre con la stessa persona, su WhatsApp, dal primo giorno alla consegna.</p></div>
+        <p class="en">One person follows your project and answers you, in your language, from the first call to delivery.</p>
+        <p class="it">Una sola persona segue il tuo progetto e ti risponde, in italiano, dalla prima chiamata alla consegna.</p></div>
     </div>
   </div>
 </section>
@@ -588,7 +609,7 @@ footer .legal-f a{text-decoration:underline}
   <div class="wrap">
     <span class="kicker"><span class="en">Who you talk to</span><span class="it">Con chi parli</span></span>
     <h2 class="en">Two people, <mark>two languages</mark></h2>
-    <h2 class="it">Due persone, <mark>due lingue</mark></h2>
+    <h2 class="it">Tu parli con <mark>Erica</mark></h2>
     <div class="team">
       <div class="mate rv">
         <img src="assets/img/abdo.webp?v=2" width="480" height="480" alt="Abdo Lyassi" loading="lazy">
@@ -596,7 +617,7 @@ footer .legal-f a{text-decoration:underline}
           <div class="hd"><b>&gt;</b> mr.lyto · 🇬🇧 English</div>
           <h3>Abdo</h3>
           <p class="en">Software developer &amp; AI engineer. Builds the agents, the automations and the websites.</p>
-          <p class="it">Sviluppatore e AI engineer. Costruisce gli agenti, le automazioni e i siti. Parla inglese.</p>
+          <p class="it">Sviluppatore e AI engineer. Lavora dietro le quinte: costruisce gli agenti, le automazioni e i siti. Con i clienti italiani parli con Erica, lui parla inglese.</p>
           <a class="btn btn-ghost btn-sm" href="https://ig.me/m/mr.lyto" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>@mr.lyto</a>
         </div>
       </div>
@@ -606,7 +627,7 @@ footer .legal-f a{text-decoration:underline}
           <div class="hd"><b>&gt;</b> ms.lyto · 🇮🇹 Italiano</div>
           <h3>Erica</h3>
           <p class="en">Your contact in Italy. Listens to what you need and follows your project from the first call to delivery.</p>
-          <p class="it">Il tuo riferimento in Italia. Ascolta cosa ti serve e segue il progetto dalla prima chiamata alla consegna.</p>
+          <p class="it">La tua referente, in italiano. Ascolta cosa ti serve, ti fa il preventivo e segue il progetto dalla prima chiamata alla consegna. Le domande tecniche le gira ad Abdo: tu non devi farlo.</p>
           <a class="btn btn-ghost btn-sm" href="https://ig.me/m/ms.lyto" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>@ms.lyto</a>
         </div>
       </div>
@@ -715,13 +736,13 @@ footer .legal-f a{text-decoration:underline}
     document.querySelector('meta[name="description"]').content = l === 'it'
       ? 'Agenti AI, automazioni e siti per piccole attività, da Torino. Prezzo fisso, data di consegna scritta, un solo referente. Prima chiamata di 20 minuti gratis.'
       : 'AI agents, automations and websites for small businesses, from Turin. Fixed price, delivery date in writing, one person to talk to. Free 20-min call.';
-    document.querySelector('link[rel="canonical"]').href = l === 'it' ? 'https://lytostudio.com/?lang=it' : 'https://lytostudio.com/';
+    document.querySelector('link[rel="canonical"]').href = l === 'it' ? 'https://lytostudio.com/it' : 'https://lytostudio.com/';
     document.querySelectorAll('.lang button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.lang === l); });
     document.querySelectorAll('option[data-en]').forEach(function(o){ o.textContent = o.dataset[l]; });
     if (save) { try { localStorage.setItem('lyto-lang', l); } catch(e){} }
   }
-  // ?lang= in the link > saved choice > browser language
-  var q = new URLSearchParams(location.search).get('lang'), saved = null;
+  // ?lang= in the link (or the /it page) > saved choice > browser language
+  var q = new URLSearchParams(location.search).get('lang') || (/^\/it\/?$/.test(location.pathname) ? 'it' : null), saved = null;
   try { saved = localStorage.getItem('lyto-lang'); } catch(e){}
   var nav = (navigator.language || '').toLowerCase().indexOf('it') === 0 ? 'it' : 'en';
   setLang(q === 'it' || q === 'en' ? q : (saved || nav), false);
@@ -748,8 +769,9 @@ footer .legal-f a{text-decoration:underline}
     });
   }
 
-  // contact form: Formspree when FORM_ENDPOINT is set, otherwise opens the mail app
-  var FORM_ENDPOINT = ''; // e.g. https://formspree.io/f/xxxxxxx
+  // contact form: sent by FormSubmit to MAIL (the very first message sends an activation email
+  // to hello@ that has to be confirmed once); if it fails, show the message ready to copy + mailto
+  var FORM_ENDPOINT = 'https://formsubmit.co/ajax/hello@lytostudio.com'; // empty = opens the mail app
   var MAIL = 'hello@lytostudio.com';
   var form = document.getElementById('cform'), msg = document.getElementById('fmsg');
   function t(en, it){ return root.classList.contains('it') ? it : en; }
@@ -759,16 +781,21 @@ footer .legal-f a{text-decoration:underline}
     if (!form.checkValidity()) { msg.classList.add('err'); msg.textContent = t('Please fill in name, a valid email and a few words about your business.', 'Compila nome, un\'email valida e due righe sulla tua attività.'); return; }
     if (form._gotcha.value) return;
     var d = new FormData(form), topic = form.topic.options[form.topic.selectedIndex].text;
-    d.set('topic', topic); d.set('lang', root.lang);
-    if (!FORM_ENDPOINT) {
-      var body = d.get('message') + '\n\n— ' + d.get('name') + ' · ' + d.get('email');
-      location.href = 'mailto:' + MAIL + '?subject=' + encodeURIComponent('Lyto · ' + topic) + '&body=' + encodeURIComponent(body);
-      return;
-    }
+    d.set('topic', topic); d.set('lang', root.lang); d.delete('_gotcha');
+    d.set('_subject', 'Lyto · ' + topic + ' · ' + d.get('name')); d.set('_template', 'table'); d.set('_captcha', 'false');
+    var body = d.get('message') + '\n\n— ' + d.get('name') + ' · ' + d.get('email');
+    var mailto = 'mailto:' + MAIL + '?subject=' + encodeURIComponent('Lyto · ' + topic) + '&body=' + encodeURIComponent(body);
+    if (!FORM_ENDPOINT) { location.href = mailto; return; }
     var btn = form.querySelector('button'); btn.disabled = true;
     fetch(FORM_ENDPOINT, { method: 'POST', body: d, headers: { Accept: 'application/json' } })
-      .then(function(r){ if (!r.ok) throw r; form.reset(); msg.textContent = t('✓ Sent. We\'ll get back to you soon.', '✓ Inviato. Ti rispondiamo al più presto.'); })
-      .catch(function(){ msg.classList.add('err'); msg.textContent = t('Something went wrong. Write to ' + MAIL, 'Qualcosa è andato storto. Scrivi a ' + MAIL); })
+      .then(function(r){ return r.json(); })
+      .then(function(j){ if (String(j.success) !== 'true') throw j; form.reset(); msg.textContent = t('✓ Sent. We\'ll get back to you within 24 hours.', '✓ Inviato. Ti rispondiamo entro 24 ore.'); })
+      .catch(function(){
+        // nothing is lost: the message stays in the form and one tap opens it in the mail app
+        msg.classList.add('err');
+        msg.innerHTML = t('The form didn\'t go through. <a href="">Send it by email</a> (it\'s already written) or write to ', 'Il modulo non è partito. <a href="">Mandalo via email</a> (è già scritto) oppure scrivi a ') + MAIL;
+        msg.querySelector('a').href = mailto;
+      })
       .then(function(){ btn.disabled = false; });
   });
 
