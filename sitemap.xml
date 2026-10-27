@@ -1,15 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://lytostudio.com/</loc>
-    <lastmod>2026-10-19</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://lytostudio.com/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://lytostudio.com/?lang=it"/>
-  </url>
-  <url>
-    <loc>https://lytostudio.com/?lang=it</loc>
-    <lastmod>2026-10-19</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://lytostudio.com/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://lytostudio.com/?lang=it"/>
-  </url>
-</urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>https://lytostudio.com/it/</loc><xhtml:link rel="alternate" hreflang="it" href="https://lytostudio.com/it/"/><xhtml:link rel="alternate" hreflang="en" href="https://lytostudio.com/en/"/></url><url><loc>https://lytostudio.com/it/siti/</loc><xhtml:link rel="alternate" hreflang="it" href="https://lytostudio.com/it/siti/"/><xhtml:link rel="alternate" hreflang="en" href="https://lytostudio.com/en/websites/"/></url><url><loc>https://lytostudio.com/it/automazioni/</loc><xhtml:link rel="alternate" hreflang="it" href="https://lytostudio.com/it/automazioni/"/><xhtml:link rel="alternate" hreflang="en" href="https://lytostudio.com/en/automations/"/></url><url><loc>https://lytostudio.com/it/lyto-caller/</loc><xhtml:link rel="alternate" hreflang="it" href="https://lytostudio.com/it/lyto-caller/"/><xhtml:link rel="alternate" hreflang="en" href="https://lytostudio.com/en/lyto-caller/"/></url><url><loc>https://lytostudio.com/en/</loc><xhtml:link rel="alternate" hreflang="it" href="https://lytostudio.com/it/"/><xhtml:link rel="alternate" hreflang="en" href="https://lytostudio.com/en/"/></url><url><loc>https://lytostudio.com/en/websites/</loc><xhtml:link rel="alternate" hreflang="it" href="https://lytostudio.com/it/siti/"/><xhtml:link rel="alternate" hreflang="en" href="https://lytostudio.com/en/websites/"/></url><url><loc>https://lytostudio.com/en/automations/</loc><xhtml:link rel="alternate" hreflang="it" href="https://lytostudio.com/it/automazioni/"/><xhtml:link rel="alternate" hreflang="en" href="https://lytostudio.com/en/automations/"/></url><url><loc>https://lytostudio.com/en/lyto-caller/</loc><xhtml:link rel="alternate" hreflang="it" href="https://lytostudio.com/it/lyto-caller/"/><xhtml:link rel="alternate" hreflang="en" href="https://lytostudio.com/en/lyto-caller/"/></url></urlset>

@@ -1,827 +1,292 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lyto Studio · AI automations &amp; websites for small business</title>
-<meta name="description" content="AI agents, automations and websites for small businesses, from Turin. Fixed price, delivery date in writing, one person to talk to. Free 20-min call.">
-<link rel="canonical" href="https://lytostudio.com/">
-<link rel="alternate" hreflang="en" href="https://lytostudio.com/">
-<link rel="alternate" hreflang="it" href="https://lytostudio.com/?lang=it">
-<link rel="alternate" hreflang="x-default" href="https://lytostudio.com/">
+<title>Lyto Studio · Siti web e automazioni per piccole attività</title>
+<meta name="description" content="Siti web, automazioni e assistenti AI per piccole attività. Da Torino, in italiano e inglese. Scopri esempi, prezzi e inclusioni.">
+<link rel="canonical" href="https://lytostudio.com/it/">
+<link rel="alternate" hreflang="it" href="https://lytostudio.com/it/">
+<link rel="alternate" hreflang="en" href="https://lytostudio.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://lytostudio.com/it/">
 <meta property="og:site_name" content="Lyto Studio">
-<meta property="og:title" content="Lyto Studio · The boring work, done for you">
-<meta property="og:description" content="AI agents, automations and websites for small businesses. Fixed price, delivery date in writing.">
+<meta property="og:title" content="Lyto Studio · Siti web e automazioni per piccole attività">
+<meta property="og:description" content="Siti web, automazioni e assistenti AI per piccole attività. Da Torino, in italiano e inglese. Scopri esempi, prezzi e inclusioni.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://lytostudio.com/">
-<meta property="og:image" content="https://lytostudio.com/assets/img/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Lyto: the boring work, done for you. AI agents, automations, websites.">
-<meta property="og:locale" content="en_GB">
-<meta property="og:locale:alternate" content="it_IT">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://lytostudio.com/assets/img/og-image.png">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Lyto Studio",
-  "alternateName": "Lyto",
-  "url": "https://lytostudio.com/",
-  "logo": "https://lytostudio.com/assets/img/icon-512.png",
-  "image": "https://lytostudio.com/assets/img/og-image.png",
-  "description": "AI agents, automations and websites for small businesses. Fixed price, delivery date in writing.",
-  "email": "hello@lytostudio.com",
-  "address": {"@type": "PostalAddress", "addressLocality": "Torino", "addressRegion": "TO", "addressCountry": "IT"},
-  "areaServed": ["IT", "Europe"],
-  "availableLanguage": ["en", "it"],
-  "founder": [{"@type": "Person", "name": "Erica Torta"}, {"@type": "Person", "name": "Abderrahman Lyassi"}],
-  "knowsAbout": ["AI agents", "Business automation", "Web design", "AI voice assistant for real estate agencies"],
-  "sameAs": ["https://www.instagram.com/mr.lyto/", "https://www.instagram.com/ms.lyto/", "https://www.instagram.com/the.lytos/"]
-}
-</script>
+<meta property="og:url" content="https://lytostudio.com/it/">
+<meta property="og:image" content="https://lytostudio.com/assets/img/icon-512.png">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#0E1116">
-<link rel="preload" href="assets/fonts/din.woff2" as="font" type="font/woff2" crossorigin>
-<style>
-@font-face{font-family:'Poppins';font-weight:400;font-display:swap;src:url(assets/fonts/Poppins-Regular.ttf) format('truetype')}
-@font-face{font-family:'Poppins';font-weight:500;font-display:swap;src:url(assets/fonts/Poppins-Medium.ttf) format('truetype')}
-@font-face{font-family:'Poppins';font-weight:700;font-display:swap;src:url(assets/fonts/Poppins-Bold.ttf) format('truetype')}
-@font-face{font-family:'Din';font-weight:700;font-display:swap;src:local('DIN Condensed Bold'),local('DINCondensed-Bold'),url(assets/fonts/din.woff2) format('woff2')}
-
-:root{
-  --bg1:#1E2430; --bg2:#0E1116; --card:#161B24; --card2:#1B2230;
-  --fg:#FFFFFF; --mute:rgba(255,255,255,.66); --line:rgba(56,189,248,.22); --line2:rgba(255,255,255,.09);
-  --acc:#38BDF8; --hl:#0284C7; --ok:#4ADE80;
-  --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Poppins',system-ui,sans-serif;color:var(--fg);line-height:1.6;-webkit-font-smoothing:antialiased;
-  overflow-x:hidden;background-color:var(--bg2);
-  background:
-    linear-gradient(rgba(56,189,248,.035) 1px,transparent 1px) 0 0/56px 56px,
-    linear-gradient(90deg,rgba(56,189,248,.035) 1px,transparent 1px) 0 0/56px 56px,
-    radial-gradient(1000px 760px at 12% 0%,rgba(2,132,199,.40),transparent 70%),
-    radial-gradient(900px 900px at 100% 60%,rgba(2,132,199,.14),transparent 70%),
-    linear-gradient(180deg,var(--bg1) 0,var(--bg2) 900px) var(--bg2)}
-a{color:inherit;text-decoration:none}
-img{display:block;max-width:100%;height:auto}
-
-/* bilingual: EN by default, html.it shows Italian */
-html:not(.it) .it, html.it .en{display:none}
-
-.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
-section{padding:96px 0}
-.kicker{font-family:var(--mono);font-size:13px;color:var(--acc);letter-spacing:.06em;text-transform:uppercase;
-  display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);padding:6px 12px;border-radius:999px}
-.kicker::before{content:'>';opacity:.7}
-h1,h2,h3{font-family:'Din',Impact,sans-serif;font-weight:700;text-transform:uppercase;line-height:.95}
-h2{font-size:clamp(42px,6.4vw,72px);margin:18px 0 16px;max-width:860px}
-mark{background:var(--hl);color:#fff;padding:0 .14em;border-radius:.08em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
-.lead{color:var(--mute);font-size:18px;max-width:640px}
-
-/* ---- buttons ---- */
-.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:15px;border-radius:12px;
-  padding:14px 22px;transition:transform .15s,background .15s,border-color .15s;white-space:nowrap;cursor:pointer}
-.btn:hover{transform:translateY(-2px)}
-.btn-blue{background:var(--hl);color:#fff;box-shadow:0 10px 30px rgba(2,132,199,.35)}
-.btn-blue:hover{background:#0396e0}
-.btn-ghost{border:1px solid rgba(255,255,255,.25)}
-.btn-ghost:hover{border-color:var(--acc)}
-.btn-sm{padding:9px 14px;font-size:14px;border-radius:10px}
-.btn svg{width:18px;height:18px;flex:none}
-
-/* ---- nav ---- */
-nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
-  background:rgba(14,17,22,.66);border-bottom:1px solid var(--line2)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:14px}
-.handle{font-family:var(--mono);font-size:18px;font-weight:600}
-.handle .p{color:var(--acc)}
-.cur{display:inline-block;width:.55em;height:1.05em;background:var(--acc);vertical-align:-.15em;margin-left:2px;
-  animation:blink 1.1s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
-.menu{display:flex;gap:26px;font-size:14px;color:var(--mute)}
-.menu a:hover{color:#fff}
-.nav-r{display:flex;align-items:center;gap:10px}
-.lang{display:flex;border:1px solid var(--line2);border-radius:10px;padding:3px}
-.lang button{font:600 12px var(--mono);color:var(--mute);background:none;border:0;padding:6px 9px;border-radius:7px;cursor:pointer}
-.lang button[aria-pressed="true"]{background:#fff;color:var(--bg2)}
-
-/* ---- hero ---- */
-.hero{padding:76px 0 90px}
-.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
-.hero h1{font-size:clamp(58px,8.6vw,112px);margin:22px 0 22px}
-.hero .lead{font-size:19px}
-.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-.trust{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:28px;font-size:14px;color:var(--mute)}
-.trust span::before{content:'✓ ';color:var(--ok);font-weight:700}
-
-/* terminal window */
-.term{border-radius:16px;background:rgba(14,17,22,.82);border:1px solid var(--line);
-  box-shadow:0 40px 80px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.03) inset;overflow:hidden}
-.term .bar{display:flex;align-items:center;gap:7px;padding:12px 14px;border-bottom:1px solid var(--line2)}
-.term .bar i{width:11px;height:11px;border-radius:50%;background:#3a4252}
-.term .bar i:nth-child(1){background:#FF5F57}.term .bar i:nth-child(2){background:#FEBC2E}.term .bar i:nth-child(3){background:#28C840}
-.term .bar span{margin-left:auto;font:12px var(--mono);color:var(--mute)}
-.term pre{font:14px/1.85 var(--mono);padding:18px 20px 22px;white-space:pre-wrap;color:#cfd8e3;min-height:330px}
-.term .t{color:rgba(255,255,255,.38)} .term .a{color:var(--acc)} .term .g{color:var(--ok)} .term .w{color:#fff}
-.term-note{font:12px var(--mono);color:var(--mute);margin-top:10px;text-align:right}
-
-/* ---- pains ---- */
-.pains{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
-.pain{border-radius:18px;padding:24px 22px;background:var(--card);border:1px solid var(--line2)}
-.pain .h{font-family:var(--mono);font-size:30px;color:var(--acc);line-height:1}
-.pain h3{font-size:28px;margin:16px 0 8px}
-.pain p{color:var(--mute);font-size:14.5px}
-
-/* ---- services ---- */
-.svcs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:44px}
-.svc{position:relative;border-radius:22px;padding:30px;background:var(--card);border:1px solid var(--line2);
-  transition:border-color .2s}
-.svc:hover{border-color:var(--line)}
-.svc .n{font:13px var(--mono);color:var(--acc)}
-.svc h3{font-size:42px;margin:10px 0 10px}
-.svc p{color:var(--mute);font-size:15.5px;margin-bottom:16px}
-.svc ul{list-style:none;display:grid;gap:7px;font-size:14.5px}
-.svc li{display:flex;gap:10px}
-.svc li::before{content:'→';color:var(--acc);font-family:var(--mono)}
-.svc .badge{position:absolute;top:26px;right:26px;font:600 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;
-  background:var(--hl);color:#fff;padding:5px 9px;border-radius:7px}
-
-/* ---- steps ---- */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px;counter-reset:s}
-.step{border-top:2px solid var(--hl);padding-top:22px}
-.step .k{font:13px var(--mono);color:var(--acc)}
-.step h3{font-size:34px;margin:8px 0 8px}
-.step p{color:var(--mute);font-size:15px}
-
-/* ---- pricing ---- */
-.tabs{display:inline-flex;gap:6px;margin-top:34px;padding:5px;border-radius:14px;background:var(--card);border:1px solid var(--line2);flex-wrap:wrap}
-.tabs button{font:600 14px 'Poppins';color:var(--mute);background:none;border:0;border-radius:10px;padding:10px 16px;cursor:pointer}
-.tabs button[aria-selected="true"]{background:var(--hl);color:#fff}
-.plans{display:none;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
-.plans.on{display:grid}
-.plan{border-radius:22px;padding:28px;background:var(--card);border:1px solid var(--line2);display:flex;flex-direction:column}
-.plan.hot{border-color:rgba(56,189,248,.55);background:linear-gradient(170deg,rgba(2,132,199,.28),var(--card) 60%)}
-.plan .nm{font:600 13px var(--mono);color:var(--acc);text-transform:uppercase;letter-spacing:.05em}
-.plan .pr{font-family:'Din';font-size:64px;line-height:1;margin:14px 0 4px}
-.plan .pr small{font-family:'Poppins';font-size:15px;color:var(--mute);font-weight:400;margin-left:4px}
-.plan .when{font-size:13.5px;color:var(--ok);margin-bottom:16px}
-.plan p{color:var(--mute);font-size:14.5px;margin-bottom:14px}
-.plan ul{list-style:none;display:grid;gap:7px;font-size:14px;margin-bottom:22px}
-.plan li{display:flex;gap:9px}
-.plan li::before{content:'✓';color:var(--acc);font-weight:700}
-.plan .btn{margin-top:auto;justify-content:center}
-.price-note{margin-top:18px;font-size:13.5px;color:var(--mute)}
-
-/* ---- work ---- */
-.work{display:grid;grid-template-columns:1.25fr 1fr;gap:36px;align-items:center;margin-top:44px;
-  border-radius:26px;padding:26px;background:var(--card);border:1px solid var(--line2)}
-.browser{border-radius:12px;overflow:hidden;border:1px solid var(--line2);background:#0b0d11}
-.browser .bar{display:flex;align-items:center;gap:6px;padding:9px 12px;border-bottom:1px solid var(--line2)}
-.browser .bar i{width:9px;height:9px;border-radius:50%;background:#3a4252}
-.browser .bar span{margin:0 auto;font:11.5px var(--mono);color:var(--mute);background:rgba(255,255,255,.05);
-  padding:3px 14px;border-radius:6px}
-.work h3{font-size:44px;margin:8px 0 10px}
-.work p{color:var(--mute);font-size:15.5px;margin-bottom:16px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
-.chips span{font:12.5px var(--mono);border:1px solid var(--line);color:var(--acc);padding:5px 10px;border-radius:8px}
-
-/* ---- promises ---- */
-.proms{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
-.prom{border-radius:20px;padding:28px;background:var(--card);border:1px solid var(--line2)}
-.prom .ic{font-size:30px}
-.prom h3{font-size:32px;margin:14px 0 8px}
-.prom p{color:var(--mute);font-size:15px}
-
-/* ---- team ---- */
-.team{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:44px}
-.mate{display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:center;border-radius:22px;padding:22px;
-  background:var(--card);border:1px solid var(--line2)}
-.mate img{width:150px;height:150px;border-radius:16px;object-fit:cover}
-.mate .hd{font:600 15px var(--mono)} .mate .hd b{color:var(--acc);font-weight:600}
-.mate h3{font-size:38px;margin:4px 0 6px}
-.mate p{color:var(--mute);font-size:14.5px;margin-bottom:12px}
-
-/* ---- faq ---- */
-.faq{margin-top:36px;display:grid;gap:10px;max-width:860px}
-details{border-radius:16px;background:var(--card);border:1px solid var(--line2);padding:0 22px}
-summary{cursor:pointer;list-style:none;padding:20px 0;font-weight:600;font-size:16.5px;display:flex;justify-content:space-between;gap:16px}
-summary::-webkit-details-marker{display:none}
-summary::after{content:'+';font-family:var(--mono);color:var(--acc);font-size:20px;line-height:1}
-details[open] summary::after{content:'−'}
-details p{color:var(--mute);padding:0 0 20px;font-size:15.5px;max-width:740px}
-
-/* ---- final cta ---- */
-.final{border-radius:30px;padding:60px 40px;text-align:center;
-  background:radial-gradient(600px 300px at 50% 0%,rgba(56,189,248,.35),transparent 70%),linear-gradient(160deg,#0B4F78,#121a26 75%);
-  border:1px solid rgba(56,189,248,.45)}
-.final h2{margin:18px auto 14px}
-.final .lead{margin:0 auto}
-.final .ctas{justify-content:center}
-.final .book-row{margin-top:24px}
-.final .book-row+.ctas{margin-top:14px}
-.dm{font-family:var(--mono);background:rgba(0,0,0,.3);border:1px dashed rgba(56,189,248,.6);padding:2px 8px;border-radius:6px;color:#fff}
-
-.cform{max-width:620px;margin:40px auto 0;text-align:left;display:grid;gap:16px;border-top:1px solid var(--line);padding-top:32px}
-.cform .or{text-align:center;font-family:var(--mono);color:var(--mute);font-size:14px}
-.cform .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.cform label{display:grid;gap:6px;font-size:14px;color:var(--mute)}
-.cform input,.cform select,.cform textarea{font:inherit;font-size:16px;color:#fff;background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
-.cform input:focus,.cform select:focus,.cform textarea:focus{outline:2px solid var(--acc);outline-offset:1px}
-.cform select option{background:var(--card)}
-.cform .btn{justify-self:start;border:0;cursor:pointer}
-.cform .fine{font-size:13px;color:var(--mute)}
-.cform .fine a{color:#fff;text-decoration:underline}
-.cform .fmsg:empty{display:none}
-.cform .fmsg{font-family:var(--mono);font-size:14px;color:var(--ok)}
-.cform .fmsg.err{color:#FCA5A5}
-.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
-footer{border-top:1px solid var(--line2);padding:30px 0 42px;color:var(--mute);font-size:14px}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
-footer .links{display:flex;gap:18px;flex-wrap:wrap}
-footer a:hover{color:#fff}
-footer .legal-f a{text-decoration:underline}
-
-.rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
-.rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.cur{animation:none}html{scroll-behavior:auto}}
-
-@media (max-width:1000px){
-  .menu{display:none}
-  .hero .wrap{grid-template-columns:1fr}
-  .pains{grid-template-columns:repeat(2,1fr)}
-  .plans.on,.proms{grid-template-columns:1fr}
-  .work,.team{grid-template-columns:1fr}
-}
-@media (max-width:720px){
-  section{padding:68px 0}
-  .wrap{padding:0 16px}
-  .hero{padding:44px 0 64px}
-  .svcs,.steps{grid-template-columns:1fr}
-  .pains{grid-template-columns:1fr}
-  .term pre{font-size:12.5px;min-height:0}
-  .svc,.plan,.prom{padding:24px 20px}
-  .svc .badge{position:static;display:inline-block;margin-bottom:10px}
-  .mate{grid-template-columns:96px 1fr;gap:16px;padding:18px}
-  .mate img{width:96px;height:96px}
-  .mate h3{font-size:32px}
-  .final{padding:44px 20px}
-  .cform .row{grid-template-columns:1fr}
-  .nav-cta{display:none}
-  .tabs{display:flex;width:100%}
-  .tabs button{flex:1;padding:10px 8px}
-  .work{padding:16px}
-}
-</style>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Lyto Studio", "url": "https://lytostudio.com", "email": "hello@lytostudio.com", "address": {"@type": "PostalAddress", "addressLocality": "Torino", "addressCountry": "IT"}, "availableLanguage": ["it", "en"]}</script>
+<script src="/assets/site.js" defer>
+</script>
 </head>
 <body>
-
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
-</svg>
-
-<nav>
-  <div class="wrap">
-    <a href="#" class="handle" aria-label="Lyto"><span class="p">&gt;</span> lyto<span class="cur"></span></a>
-    <div class="menu">
-      <a href="#services"><span class="en">Services</span><span class="it">Servizi</span></a>
-      <a href="#pricing"><span class="en">Pricing</span><span class="it">Prezzi</span></a>
-      <a href="#work"><span class="en">Work</span><span class="it">Lavori</span></a>
-      <a href="#faq">FAQ</a>
-    </div>
-    <div class="nav-r">
-      <div class="lang" role="group" aria-label="Language">
-        <button type="button" data-lang="en" aria-pressed="true">EN</button>
-        <button type="button" data-lang="it" aria-pressed="false">IT</button>
-      </div>
-      <a class="btn btn-blue btn-sm nav-cta" href="#contact" data-book><span class="en">Free consultation</span><span class="it">Consulenza gratuita</span></a>
-    </div>
-  </div>
+<a class="skip" href="#main">Vai al contenuto</a>
+<nav aria-label="Navigazione principale">
+<div class="wrap">
+<a class="handle" href="/it/" aria-label="Lyto Studio">
+<span class="p">&gt;</span> lyto<span class="cur" aria-hidden="true">
+</span>
+</a>
+<div class="menu">
+<a href="/it/siti/">Siti web</a>
+<a href="/it/automazioni/">Automazioni</a>
+<a href="/it/lyto-caller/">Lyto Caller</a>
+<a href="/it/#example">Progetti</a>
+</div>
+<div class="nav-r">
+<div class="lang" aria-label="Lingua">
+<a href="/it/" lang="it" hreflang="it" aria-current="page">IT</a>
+<a href="/en/" lang="en" hreflang="en">EN</a>
+</div>
+<a class="btn btn-blue btn-sm nav-cta" href="#contact">Parliamone</a>
+</div>
+</div>
+<div class="mobile-nav">
+<a href="/it/siti/">Siti web</a>
+<a href="/it/automazioni/">Automazioni</a>
+<a href="/it/lyto-caller/">Lyto Caller</a>
+</div>
 </nav>
-
+<main id="main">
 <header class="hero">
-  <div class="wrap">
-    <div>
-      <span class="kicker"><span class="en">AI agents · Automations · Websites</span><span class="it">Agenti AI · Automazioni · Siti</span></span>
-      <h1 class="en">The boring work, <mark>done for you</mark></h1>
-      <h1 class="it">Il lavoro noioso, <mark>lo fa l'AI</mark></h1>
-      <p class="lead en">We build AI agents, automations and websites for small businesses that don't have time. You keep doing your job; the repetitive part runs on its own.</p>
-      <p class="lead it">Costruiamo agenti AI, automazioni e siti per chi ha un'attività e non ha tempo. Tu continui a fare il tuo lavoro; la parte ripetitiva va da sola.</p>
-      <div class="ctas">
-        <a class="btn btn-blue" href="#contact" data-book><span class="en">Book a free 20-min call</span><span class="it">Prenota 20 minuti gratis</span> →</a>
-        <a class="btn btn-ghost" href="#services"><span class="en">See what we build</span><span class="it">Cosa costruiamo</span></a>
-      </div>
-      <div class="trust">
-        <span class="en">Fixed price</span><span class="it">Prezzo fisso</span>
-        <span class="en">Delivery date in writing</span><span class="it">Data di consegna scritta</span>
-        <span class="en">One person to talk to</span><span class="it">Un solo referente</span>
-      </div>
-    </div>
-    <div>
-      <div class="term" aria-hidden="true">
-        <div class="bar"><i></i><i></i><i></i><span>automation.log</span></div>
-<pre class="en" id="log-en"></pre>
-<pre class="it" id="log-it"></pre>
-      </div>
-      <p class="term-note en">example of an automation at work</p>
-      <p class="term-note it">esempio di un'automazione al lavoro</p>
-    </div>
-  </div>
+<div class="wrap">
+<div>
+<span class="kicker">Siti web · Automazioni · Assistenti AI</span>
+<h1>Meno lavoro ripetitivo.<br>
+<mark>Più spazio per i tuoi clienti.</mark>
+</h1>
+<p class="lead">Aiutiamo piccole attività e professionisti a presentarsi meglio online, organizzare le richieste e ridurre le operazioni manuali. Partiamo dal problema e scegliamo gli strumenti adatti.</p>
+<div class="ctas">
+<a class="btn btn-blue" href="#contact">Raccontaci cosa ti serve <span aria-hidden="true">→</span>
+</a>
+<a class="btn btn-ghost" href="#example">Guarda un esempio <span aria-hidden="true">→</span>
+</a>
+</div>
+<div class="trust">
+<span>Costi definiti prima di iniziare</span>
+<span>Un referente dedicato</span>
+<span>Italiano e inglese</span>
+</div>
+</div>
+<aside class="flow">
+<p class="tag">Esempio illustrativo · automazione</p>
+<ol>
+<li>
+<strong>Arriva una richiesta</strong>
+<p>Il cliente chiede informazioni o un preventivo.</p>
+</li>
+<li>
+<strong>Le informazioni si organizzano</strong>
+<p>Il sistema raccoglie i dati e prepara una bozza.</p>
+</li>
+<li>
+<strong>Tu controlli e approvi</strong>
+<p>Le azioni concordate restano sotto il tuo controllo.</p>
+</li>
+</ol>
+<p class="result">Una richiesta ordinata, pronta da seguire.</p>
+<p class="example">Simulazione del flusso: le integrazioni vengono definite per ogni progetto.</p>
+</aside>
+</div>
 </header>
-
-<section id="pains" style="padding-top:20px">
-  <div class="wrap">
-    <span class="kicker"><span class="en">Sound familiar?</span><span class="it">Ti suona familiare?</span></span>
-    <h2 class="en">Where your <mark>hours</mark> go</h2>
-    <h2 class="it">Dove finiscono le tue <mark>ore</mark></h2>
-    <div class="pains">
-      <div class="pain rv"><div class="h">⌘C ⌘V</div>
-        <h3 class="en">Copy-paste</h3><h3 class="it">Copia-incolla</h3>
-        <p class="en">Same data typed into three different tools, every day.</p>
-        <p class="it">Gli stessi dati scritti in tre programmi diversi, ogni giorno.</p></div>
-      <div class="pain rv"><div class="h">☏ ✕</div>
-        <h3 class="en">Missed calls</h3><h3 class="it">Chiamate perse</h3>
-        <p class="en">You're busy, the phone rings, the customer calls someone else.</p>
-        <p class="it">Sei impegnato, il telefono squilla, il cliente chiama un altro.</p></div>
-      <div class="pain rv"><div class="h">@ 47</div>
-        <h3 class="en">Full inbox</h3><h3 class="it">Inbox piena</h3>
-        <p class="en">Emails and WhatsApp messages answered late, or never.</p>
-        <p class="it">Email e messaggi WhatsApp a cui rispondi tardi, o mai.</p></div>
-      <div class="pain rv"><div class="h">www ?</div>
-        <h3 class="en">Old website</h3><h3 class="it">Sito vecchio</h3>
-        <p class="en">Slow on the phone, no clear way to contact you.</p>
-        <p class="it">Lento dal telefono, nessun modo chiaro per contattarti.</p></div>
-    </div>
-  </div>
+<span id="pricing">
+</span>
+<section id="services">
+<div class="wrap">
+<span class="kicker">Scegli da dove partire</span>
+<h2>Quale problema vuoi <mark>risolvere?</mark>
+</h2>
+<div class="svcs">
+<article class="svc">
+<div class="n">01</div>
+<h3>Un sito che presenta bene la tua attività</h3>
+<p>Servizi chiari, immagini e un percorso semplice per contattarti, anche dal telefono.</p>
+<p class="from">Da 590 € una tantum</p>
+<a class="btn btn-ghost" href="/it/siti/">Scopri il servizio <span aria-hidden="true">→</span>
+</a>
+</article>
+<article class="svc">
+<div class="n">02</div>
+<h3>Meno operazioni ripetitive</h3>
+<p>Colleghiamo gli strumenti che usi e automatizziamo un processo concreto: richieste, dati o preparazione dei preventivi.</p>
+<p class="from">Da 1.490 € + gestione da 99 €/mese</p>
+<a class="btn btn-ghost" href="/it/automazioni/">Scopri il servizio <span aria-hidden="true">→</span>
+</a>
+</article>
+<article class="svc">
+<div class="n">03</div>
+<h3>La tua agenzia continua a rispondere</h3>
+<p>Lyto Caller raccoglie le richieste telefoniche quando sei impegnato e ti invia un riepilogo per richiamare.</p>
+<p class="from">149 €/mese + 290 € di attivazione</p>
+<a class="btn btn-ghost" href="/it/lyto-caller/">Scopri il servizio <span aria-hidden="true">→</span>
+</a>
+</article>
+</div>
+<p class="price-note">Importi IVA esclusa, se applicabile. Inclusioni e costi ricorrenti sono indicati nelle pagine dei servizi.</p>
+</div>
 </section>
-
-<section id="services" style="padding-top:0">
-  <div class="wrap">
-    <span class="kicker"><span class="en">Services</span><span class="it">Servizi</span></span>
-    <h2 class="en">What we <mark>build</mark></h2>
-    <h2 class="it">Cosa <mark>costruiamo</mark></h2>
-    <div class="svcs">
-      <div class="svc rv">
-        <div class="n">01 / automations</div>
-        <h3 class="en">AI automations</h3><h3 class="it">Automazioni AI</h3>
-        <p class="en">We take a process you do by hand and turn it into a system that runs by itself. You approve, it executes.</p>
-        <p class="it">Prendiamo un processo che oggi fai a mano e lo trasformiamo in un sistema che va da solo. Tu approvi, lui esegue.</p>
-        <ul>
-          <li class="en">Quotes and invoices</li><li class="it">Preventivi e fatture</li>
-          <li class="en">Orders and customer onboarding</li><li class="it">Ordini e onboarding clienti</li>
-          <li class="en">Data between your tools, no copy-paste</li><li class="it">Dati tra i tuoi programmi, senza copia-incolla</li>
-        </ul>
-      </div>
-      <div class="svc rv">
-        <div class="n">02 / agents</div>
-        <h3 class="en">AI agents</h3><h3 class="it">Agenti AI</h3>
-        <p class="en">An assistant trained on your business that answers customers, sorts requests and passes you only what matters.</p>
-        <p class="it">Un assistente che conosce la tua attività: risponde ai clienti, smista le richieste e ti passa solo quello che conta.</p>
-        <ul>
-          <li class="en">Replies to emails and WhatsApp</li><li class="it">Risposte a email e WhatsApp</li>
-          <li class="en">Qualifies leads from your website</li><li class="it">Qualifica i contatti dal sito</li>
-          <li class="en">Daily summary, so nothing gets lost</li><li class="it">Riepilogo giornaliero, così niente si perde</li>
-        </ul>
-      </div>
-      <div class="svc rv">
-        <div class="n">03 / websites</div>
-        <h3 class="en">Websites</h3><h3 class="it">Siti web</h3>
-        <p class="en">For shops, studios, professionals and restaurants. Built for the phone, because that's where people look for you.</p>
-        <p class="it">Per negozi, studi, professionisti e ristoranti. Pensati per il telefono, perché è lì che ti cercano.</p>
-        <ul>
-          <li class="en">WhatsApp button and contact form</li><li class="it">Bottone WhatsApp e modulo contatti</li>
-          <li class="en">Basic SEO and Google Business</li><li class="it">SEO base e Google Business</li>
-          <li class="en">Online in 7–10 days</li><li class="it">Online in 7–10 giorni</li>
-        </ul>
-      </div>
-      <div class="svc rv">
-        <span class="badge en">Real estate</span><span class="badge it">Immobiliari</span>
-        <div class="n">04 / lyto caller</div>
-        <h3>Lyto Caller</h3>
-        <p class="en">An AI voice assistant that answers your agency's phone 24/7, even when you're at a viewing.</p>
-        <p class="it">L'assistente vocale AI che risponde al telefono dell'agenzia 24 ore su 24, anche quando sei in visita.</p>
-        <ul>
-          <li class="en">Answers with your agency's name</li><li class="it">Risponde col nome dell'agenzia</li>
-          <li class="en">Asks the right questions: buy, sell, rent</li><li class="it">Fa le domande giuste: compra, vende, affitta</li>
-          <li class="en">Summary on WhatsApp within 1 minute</li><li class="it">Riepilogo su WhatsApp entro 1 minuto</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<span id="work">
+</span>
+<section id="example">
+<div class="wrap">
+<span class="kicker">Un progetto reale</span>
+<h2>Un progetto reale, <mark>da esplorare.</mark>
+</h2>
+<article class="work">
+<div class="browser">
+<div class="bar">
+<i>
+</i>
+<i>
+</i>
+<i>
+</i>
+<span>upcollectiontorino.com</span>
+</div>
+<img src="/assets/img/work-upcollection.webp" width="1000" height="625" loading="lazy" alt="Homepage del sito Up Collection">
+</div>
+<div>
+<p class="label">Sito web · negozio di abbigliamento · Torino</p>
+<h3>Up Collection</h3>
+<p>Un negozio di abbigliamento aperto dagli anni ’60. Abbiamo realizzato un sito per presentare le collezioni uomo e donna e facilitare il contatto con il negozio.</p>
+<div class="chips">
+<span>IT / EN</span>
+<span>Mobile</span>
+<span>WhatsApp</span>
+</div>
+<p>Il lavoro: organizzazione delle pagine, versione italiana e inglese, contatto WhatsApp e configurazione di Google Search Console.</p>
+<a class="btn btn-ghost" href="https://upcollectiontorino.com" target="_blank" rel="noopener">Visita il sito ↗</a>
+</div>
+</article>
+</div>
 </section>
-
-<section id="how" style="padding-top:0">
-  <div class="wrap">
-    <span class="kicker"><span class="en">How it works</span><span class="it">Come funziona</span></span>
-    <h2 class="en">Three <mark>steps</mark>, no surprises</h2>
-    <h2 class="it">Tre <mark>passi</mark>, nessuna sorpresa</h2>
-    <div class="steps">
-      <div class="step rv"><div class="k">step_01</div>
-        <h3 class="en">A 20-min call</h3><h3 class="it">20 minuti al telefono</h3>
-        <p class="en">You tell us what eats your time. We tell you what makes sense to automate, and what doesn't.</p>
-        <p class="it">Ci racconti cosa ti fa perdere tempo. Ti diciamo cosa ha senso automatizzare e cosa no.</p></div>
-      <div class="step rv"><div class="k">step_02</div>
-        <h3 class="en">Price and date</h3><h3 class="it">Prezzo e data</h3>
-        <p class="en">One fixed price and a delivery date, written in the contract. No hourly billing.</p>
-        <p class="it">Un prezzo fisso e una data di consegna, scritti nel contratto. Niente ore da pagare.</p></div>
-      <div class="step rv"><div class="k">step_03</div>
-        <h3 class="en">We build, we watch</h3><h3 class="it">Costruiamo, controlliamo</h3>
-        <p class="en">We build it, run it on our servers and keep an eye on it. You just use it.</p>
-        <p class="it">Lo costruiamo, gira sui nostri server e lo teniamo d'occhio noi. Tu lo usi e basta.</p></div>
-    </div>
-  </div>
+<section id="how">
+<div class="wrap">
+<span class="kicker">Come lavoriamo</span>
+<h2>Prima capiamo il problema. <mark>Poi costruiamo.</mark>
+</h2>
+<div class="steps">
+<article class="step">
+<span class="k">01</span>
+<h3>Ci racconti come lavori</h3>
+<p>In 20 minuti guardiamo il problema, gli strumenti che utilizzi e il risultato che cerchi.</p>
+</article>
+<article class="step">
+<span class="k">02</span>
+<h3>Ricevi una proposta precisa</h3>
+<p>Attività incluse, esclusioni, prezzo, canoni e data di consegna. Gli extra si concordano prima.</p>
+</article>
+<article class="step">
+<span class="k">03</span>
+<h3>Proviamo la soluzione insieme</h3>
+<p>Verifichiamo i casi concordati, ti mostriamo come usarla e definiamo l’assistenza successiva.</p>
+</article>
+</div>
+</div>
 </section>
-
-<section id="pricing" style="padding-top:0">
-  <div class="wrap">
-    <span class="kicker"><span class="en">Pricing</span><span class="it">Prezzi</span></span>
-    <h2 class="en">What you read is <mark>what you pay</mark></h2>
-    <h2 class="it">Quello che leggi è <mark>quello che paghi</mark></h2>
-    <div class="tabs" role="tablist">
-      <button type="button" role="tab" data-tab="web" aria-selected="true"><span class="en">Websites</span><span class="it">Siti</span></button>
-      <button type="button" role="tab" data-tab="auto" aria-selected="false"><span class="en">Automations</span><span class="it">Automazioni</span></button>
-      <button type="button" role="tab" data-tab="caller" aria-selected="false">Lyto Caller</button>
-    </div>
-
-    <div class="plans on" data-panel="web">
-      <div class="plan">
-        <div class="nm">One page</div>
-        <div class="pr">€290</div>
-        <div class="when en">Delivered in 7 days</div><div class="when it">Consegna in 7 giorni</div>
-        <p class="en">One long page: who you are, services, photos, reviews, map, WhatsApp button. Mobile-first.</p>
-        <p class="it">Una pagina lunga: chi sei, servizi, foto, recensioni, mappa, bottone WhatsApp. Pensata per il telefono.</p>
-        <a class="btn btn-ghost" href="#contact"><span class="en">Start here</span><span class="it">Parti da qui</span></a>
-      </div>
-      <div class="plan hot">
-        <div class="nm en">Full website</div><div class="nm it">Sito completo</div>
-        <div class="pr">€990</div>
-        <div class="when en">Delivered in 10 days</div><div class="when it">Consegna in 10 giorni</div>
-        <ul>
-          <li class="en">Up to 5 pages</li><li class="it">Fino a 5 pagine</li>
-          <li class="en">Quote or booking form</li><li class="it">Modulo preventivi o prenotazioni</li>
-          <li class="en">Basic SEO + Google Business</li><li class="it">SEO base + Google Business</li>
-        </ul>
-        <a class="btn btn-blue" href="#contact"><span class="en">Let's talk</span><span class="it">Parliamone</span></a>
-      </div>
-      <div class="plan">
-        <div class="nm en">Website care</div><div class="nm it">Cura del sito</div>
-        <div class="pr">€29<small>/<span class="en">month</span><span class="it">mese</span></small></div>
-        <div class="when en">Optional, no lock-in</div><div class="when it">Opzionale, senza vincolo</div>
-        <p class="en">Hosting, domain, updates and small changes (texts, photos, opening hours) without thinking about it.</p>
-        <p class="it">Hosting, dominio, aggiornamenti e piccole modifiche (testi, foto, orari) senza pensarci più.</p>
-        <a class="btn btn-ghost" href="#contact"><span class="en">Ask about it</span><span class="it">Chiedi info</span></a>
-      </div>
-    </div>
-
-    <div class="plans" data-panel="auto">
-      <div class="plan hot">
-        <div class="nm en">Automation system</div><div class="nm it">Sistema di automazione</div>
-        <div class="pr">€1,490</div>
-        <div class="when en">Ready in 2 weeks</div><div class="when it">Pronto in 2 settimane</div>
-        <p class="en">One manual, repetitive process (quotes, email and WhatsApp replies, orders, onboarding) turned into an AI system that works by itself.</p>
-        <p class="it">Un processo manuale e ripetitivo (preventivi, risposte a email e WhatsApp, ordini, onboarding) trasformato in un sistema AI che lavora da solo.</p>
-        <a class="btn btn-blue" href="#contact"><span class="en">Let's talk</span><span class="it">Parliamone</span></a>
-      </div>
-      <div class="plan">
-        <div class="nm en">Management</div><div class="nm it">Gestione</div>
-        <div class="pr">€79<small>/<span class="en">month</span><span class="it">mese</span></small></div>
-        <div class="when en">First month included</div><div class="when it">Primo mese incluso</div>
-        <p class="en">Servers, AI costs, monitoring and adjustments, for each active system.</p>
-        <p class="it">Server, costi AI, monitoraggio e aggiustamenti, per ogni sistema attivo.</p>
-        <a class="btn btn-ghost" href="#contact"><span class="en">Ask about it</span><span class="it">Chiedi info</span></a>
-      </div>
-      <div class="plan">
-        <div class="nm en">Not sure?</div><div class="nm it">Non sai da dove partire?</div>
-        <div class="pr">€0</div>
-        <div class="when en">20-minute call</div><div class="when it">Chiamata di 20 minuti</div>
-        <p class="en">We look at your day together and tell you which automation would save you the most hours.</p>
-        <p class="it">Guardiamo insieme la tua giornata e ti diciamo quale automazione ti farebbe risparmiare più ore.</p>
-        <a class="btn btn-ghost" href="#contact" data-book><span class="en">Book the call</span><span class="it">Prenota la chiamata</span></a>
-      </div>
-    </div>
-
-    <div class="plans" data-panel="caller">
-      <div class="plan hot">
-        <div class="nm">Lyto Caller</div>
-        <div class="pr">€149<small>/<span class="en">month</span><span class="it">mese</span></small></div>
-        <div class="when en">Free setup · live in 48h</div><div class="when it">Setup gratuito · attivo in 48h</div>
-        <ul>
-          <li class="en">300 minutes/month (about 150 calls), then €0.30/min</li><li class="it">300 minuti al mese (circa 150 chiamate), poi 0,30 €/min</li>
-          <li class="en">Calendar, listings, transcripts</li><li class="it">Calendario, annunci, trascrizioni</li>
-          <li class="en">More offices and numbers included</li><li class="it">Più sedi e più numeri inclusi</li>
-          <li class="en">No lock-in, cancel anytime</li><li class="it">Nessun vincolo, cancelli quando vuoi</li>
-        </ul>
-        <a class="btn btn-blue" href="#contact" data-book><span class="en">Ask for a demo</span><span class="it">Chiedi una demo</span></a>
-      </div>
-      <div class="plan">
-        <div class="nm en">Yearly</div><div class="nm it">Annuale</div>
-        <div class="pr">10<small><span class="en">months instead of 12</span><span class="it">mesi invece di 12</span></small></div>
-        <div class="when en">Two months free</div><div class="when it">Due mesi gratis</div>
-        <p class="en">Monthly invoice, no advance payment.</p>
-        <p class="it">Fattura mensile, nessun anticipo.</p>
-        <a class="btn btn-ghost" href="#contact"><span class="en">Ask about it</span><span class="it">Chiedi info</span></a>
-      </div>
-      <div class="plan">
-        <div class="nm en">How it starts</div><div class="nm it">Come si parte</div>
-        <div class="pr">48h</div>
-        <div class="when en">Day 1 → Day 2</div><div class="when it">Giorno 1 → giorno 2</div>
-        <p class="en">Day 1: send us your listings and opening hours. Day 2: turn on call forwarding. From then on, it answers.</p>
-        <p class="it">Giorno 1: ci mandi annunci e orari. Giorno 2: attivi la deviazione di chiamata. Da lì in poi risponde lui.</p>
-      </div>
-    </div>
-    <p class="price-note en">Prices excl. VAT.</p>
-    <p class="price-note it">Prezzi IVA esclusa.</p>
-  </div>
+<section id="team">
+<div class="wrap">
+<span class="kicker">Con chi lavori</span>
+<h2>Due persone. <mark>Responsabilità chiare.</mark>
+</h2>
+<div class="team">
+<article class="mate">
+<img src="/assets/img/erica.webp" width="150" height="150" loading="lazy" alt="Erica">
+<div>
+<h3>Erica</h3>
+<p>Il tuo riferimento in italiano. Raccoglie le esigenze, chiarisce i passaggi e segue il progetto fino alla consegna.</p>
+</div>
+</article>
+<article class="mate">
+<img src="/assets/img/abdo.webp" width="150" height="150" loading="lazy" alt="Abdo">
+<div>
+<h3>Abdo</h3>
+<p>Si occupa dello sviluppo dei siti, delle integrazioni e dei sistemi AI. Lavora in inglese.</p>
+</div>
+</article>
+</div>
+</div>
 </section>
-
-<section id="work" style="padding-top:0">
-  <div class="wrap">
-    <span class="kicker"><span class="en">Work</span><span class="it">Lavori</span></span>
-    <h2 class="en">Made by <mark>us</mark></h2>
-    <h2 class="it">Fatto da <mark>noi</mark></h2>
-    <div class="work rv">
-      <div class="browser">
-        <div class="bar"><i></i><i></i><i></i><span>upcollectiontorino.com</span></div>
-        <img src="assets/img/work-upcollection.webp" width="1000" height="625" loading="lazy" alt="Up Collection website, home page">
-      </div>
-      <div>
-        <div class="n" style="font:13px var(--mono);color:var(--acc)">website / shop</div>
-        <h3>Up Collection</h3>
-        <p class="en">Website for a clothing shop in Turin, open since the '60s: men's and women's collections, Italian and English, WhatsApp, Google Search Console.</p>
-        <p class="it">Sito per un negozio di abbigliamento a Torino, aperto dagli anni '60: collezioni uomo e donna, italiano e inglese, WhatsApp, Google Search Console.</p>
-        <div class="chips"><span>mobile-first</span><span>IT / EN</span><span>WhatsApp</span><span>SEO</span></div>
-        <a class="btn btn-ghost" href="https://upcollectiontorino.com" target="_blank" rel="noopener"><span class="en">Visit the site</span><span class="it">Vedi il sito</span> ↗</a>
-      </div>
-    </div>
-  </div>
+<section id="faq">
+<div class="wrap">
+<span class="kicker">Prima di decidere</span>
+<h2>Le risposte che <mark>ti servono.</mark>
+</h2>
+<div class="faq">
+<details>
+<summary>Devo sapere qualcosa di tecnico?</summary>
+<p>No. Partiamo da come lavori oggi, ti spieghiamo la proposta in modo chiaro e ti mostriamo come usare la soluzione.</p>
+</details>
+<details>
+<summary>Il prezzo può cambiare durante il progetto?</summary>
+<p>Il prezzo concordato copre le attività scritte nella proposta. Se chiedi nuove funzionalità, ne definiamo costo e tempi prima di procedere.</p>
+</details>
+<details>
+<summary>Lavorate solo a Torino?</summary>
+<p>Siamo a Torino e lavoriamo anche da remoto, in italiano e inglese.</p>
+</details>
+</div>
+</div>
 </section>
-
-<section id="promises" style="padding-top:0">
-  <div class="wrap">
-    <span class="kicker"><span class="en">Our promises</span><span class="it">Le nostre promesse</span></span>
-    <h2 class="en">Written in the <mark>contract</mark></h2>
-    <h2 class="it">Scritte nel <mark>contratto</mark></h2>
-    <div class="proms">
-      <div class="prom rv"><div class="ic">€</div>
-        <h3 class="en">Fixed price</h3><h3 class="it">Prezzo fisso</h3>
-        <p class="en">No hours, no surprise extras. What you read is what you pay.</p>
-        <p class="it">Niente ore, niente extra a sorpresa. Quello che leggi è quello che paghi.</p></div>
-      <div class="prom rv"><div class="ic">📅</div>
-        <h3 class="en">Delivery date</h3><h3 class="it">Data di consegna</h3>
-        <p class="en">Every project has a date in the contract. If we're late, you get 10% off.</p>
-        <p class="it">Ogni progetto ha una data scritta nel contratto. Se sforiamo noi, sconto del 10%.</p></div>
-      <div class="prom rv"><div class="ic">💬</div>
-        <h3 class="en">One person</h3><h3 class="it">Un solo referente</h3>
-        <p class="en">You always talk to the same person, on WhatsApp, from day one to delivery.</p>
-        <p class="it">Parli sempre con la stessa persona, su WhatsApp, dal primo giorno alla consegna.</p></div>
-    </div>
-  </div>
+<section id="contact">
+<div class="wrap">
+<div class="final">
+<span class="kicker">Partiamo da una conversazione</span>
+<h2>Raccontaci cosa vuoi <mark>semplificare.</mark>
+</h2>
+<p class="lead">Non serve conoscere la tecnologia. Descrivici la tua attività e il problema che vuoi risolvere. La prima chiamata di 20 minuti è gratuita.</p>
+<div class="ctas">
+<a class="btn btn-blue" href="https://cal.com/lyto-studio/20min">Prenota sul calendario <span aria-hidden="true">→</span>
+</a>
+</div>
+<p class="contact-note">Si apre Cal.com, il servizio esterno di prenotazione. Preferisci scriverci? Prepara un’email qui sotto.</p>
+<form class="cform" id="cform">
+<div class="row">
+<label>Nome<input name="name" required autocomplete="name" maxlength="120">
+</label>
+<label>Email<input name="email" type="email" required autocomplete="email" maxlength="254">
+</label>
+</div>
+<label>Cosa ti interessa?<select name="topic">
+<option value="unsure" selected>Vorrei un consiglio</option>
+<option value="website">Un sito web</option>
+<option value="automation">Un’automazione o un assistente AI</option>
+<option value="caller">Una demo di Lyto Caller</option>
+</select>
+</label>
+<label>La tua attività e cosa vorresti migliorare<textarea name="message" rows="4" required maxlength="4000">
+</textarea>
+</label>
+<p class="fine">Il modulo prepara un’email nella tua app di posta: dovrai inviarla da lì. I dati non vengono inviati automaticamente dal sito. <a href="/privacy.html?lang=it">Informativa privacy</a>
+</p>
+<button class="btn btn-blue" type="submit">Prepara l’email →</button>
+<p id="fmsg" class="fmsg" role="status" aria-live="polite">
+</p>
+<p class="fine">Nessuna app email configurata? Scrivi direttamente a <a href="mailto:hello@lytostudio.com">hello@lytostudio.com</a>.</p>
+</form>
+</div>
+</div>
 </section>
-
-<section id="team" style="padding-top:0">
-  <div class="wrap">
-    <span class="kicker"><span class="en">Who you talk to</span><span class="it">Con chi parli</span></span>
-    <h2 class="en">Two people, <mark>two languages</mark></h2>
-    <h2 class="it">Due persone, <mark>due lingue</mark></h2>
-    <div class="team">
-      <div class="mate rv">
-        <img src="assets/img/abdo.webp?v=2" width="480" height="480" alt="Abdo Lyassi" loading="lazy">
-        <div>
-          <div class="hd"><b>&gt;</b> mr.lyto · 🇬🇧 English</div>
-          <h3>Abdo</h3>
-          <p class="en">Software developer &amp; AI engineer. Builds the agents, the automations and the websites.</p>
-          <p class="it">Sviluppatore e AI engineer. Costruisce gli agenti, le automazioni e i siti. Parla inglese.</p>
-          <a class="btn btn-ghost btn-sm" href="https://ig.me/m/mr.lyto" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>@mr.lyto</a>
-        </div>
-      </div>
-      <div class="mate rv">
-        <img src="assets/img/erica.webp?v=3" width="480" height="480" alt="Erica Torta" loading="lazy">
-        <div>
-          <div class="hd"><b>&gt;</b> ms.lyto · 🇮🇹 Italiano</div>
-          <h3>Erica</h3>
-          <p class="en">Your contact in Italy. Listens to what you need and follows your project from the first call to delivery.</p>
-          <p class="it">Il tuo riferimento in Italia. Ascolta cosa ti serve e segue il progetto dalla prima chiamata alla consegna.</p>
-          <a class="btn btn-ghost btn-sm" href="https://ig.me/m/ms.lyto" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>@ms.lyto</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="faq" style="padding-top:0">
-  <div class="wrap">
-    <span class="kicker">FAQ</span>
-    <h2 class="en">Fair <mark>questions</mark></h2>
-    <h2 class="it">Domande <mark>giuste</mark></h2>
-    <div class="faq">
-      <details>
-        <summary><span class="en">Do I need to know anything technical?</span><span class="it">Devo sapere qualcosa di tecnico?</span></summary>
-        <p class="en">No. You explain how you work today; we take care of the rest and show you how to use it.</p>
-        <p class="it">No. Tu ci spieghi come lavori oggi; al resto pensiamo noi, e ti mostriamo come usarlo.</p>
-      </details>
-      <details>
-        <summary><span class="en">What if the AI makes a mistake?</span><span class="it">E se l'AI sbaglia?</span></summary>
-        <p class="en">For anything important, you approve before it goes out. We monitor every system and adjust it when needed.</p>
-        <p class="it">Per le cose importanti approvi tu prima che parta. Controlliamo ogni sistema e lo aggiustiamo quando serve.</p>
-      </details>
-      <details>
-        <summary><span class="en">Why is there a monthly fee for automations?</span><span class="it">Perché c'è un costo mensile per le automazioni?</span></summary>
-        <p class="en">It covers the servers, the AI costs and our monitoring. The system keeps running and we keep watching it, so you don't have to.</p>
-        <p class="it">Copre i server, i costi dell'AI e il nostro controllo. Il sistema continua a girare e lo teniamo d'occhio noi, così tu non devi.</p>
-      </details>
-      <details>
-        <summary><span class="en">Do you work outside Italy?</span><span class="it">Lavorate anche fuori dall'Italia?</span></summary>
-        <p class="en">Yes. Everything is remote: Abdo works in English, Erica in Italian.</p>
-        <p class="it">Sì. Lavoriamo tutto da remoto: Abdo in inglese, Erica in italiano.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<section id="contact" style="padding-top:0">
-  <div class="wrap">
-    <div class="final rv">
-      <span class="kicker"><span class="en">Let's talk</span><span class="it">Parliamone</span></span>
-      <h2 class="en">20 minutes, <mark>free</mark></h2>
-      <h2 class="it">20 minuti, <mark>gratis</mark></h2>
-      <p class="lead en">Send us <span class="dm">AI</span> on Instagram, or fill in the form below. We'll tell you what makes sense to do, and what doesn't.</p>
-      <p class="lead it">Scrivici <span class="dm">AI</span> su Instagram, oppure compila il modulo qui sotto. Ti diciamo cosa ha senso fare e cosa no.</p>
-      <div class="ctas book-row" hidden>
-        <a class="btn btn-blue" href="#contact" data-book><span class="en">Book a free 20-min call</span><span class="it">Prenota 20 minuti gratis</span> →</a>
-      </div>
-      <div class="ctas">
-        <a class="btn btn-blue en" href="https://ig.me/m/mr.lyto" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>DM @mr.lyto (English)</a>
-        <a class="btn btn-ghost en" href="https://ig.me/m/ms.lyto" target="_blank" rel="noopener">🇮🇹 @ms.lyto (Italian)</a>
-        <a class="btn btn-blue it" href="https://ig.me/m/ms.lyto" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>Scrivi a @ms.lyto</a>
-        <a class="btn btn-ghost it" href="https://ig.me/m/mr.lyto" target="_blank" rel="noopener">🇬🇧 @mr.lyto (inglese)</a>
-      </div>
-
-      <form class="cform" id="cform" novalidate>
-        <p class="or"><span class="en">or write to us here</span><span class="it">oppure scrivici qui</span></p>
-        <div class="row">
-          <label><span class="en">Name</span><span class="it">Nome</span>
-            <input name="name" required autocomplete="name"></label>
-          <label>Email
-            <input name="email" type="email" required autocomplete="email"></label>
-        </div>
-        <label><span class="en">What do you need?</span><span class="it">Cosa ti serve?</span>
-          <select name="topic">
-            <option value="website" data-en="A website" data-it="Un sito web">A website</option>
-            <option value="automation" data-en="An automation" data-it="Un'automazione">An automation</option>
-            <option value="agent" data-en="An AI agent" data-it="Un agente AI">An AI agent</option>
-            <option value="caller" data-en="Lyto Caller (real estate)" data-it="Lyto Caller (agenzie immobiliari)">Lyto Caller (real estate)</option>
-            <option value="unsure" data-en="Not sure yet" data-it="Non lo so ancora">Not sure yet</option>
-          </select></label>
-        <label><span class="en">Tell us about your business</span><span class="it">Raccontaci della tua attività</span>
-          <textarea name="message" rows="4" required></textarea></label>
-        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
-        <p class="fine en">We use your details only to reply to you. <a href="privacy.html">Privacy policy</a></p>
-        <p class="fine it">Usiamo i tuoi dati solo per risponderti. <a href="privacy.html">Informativa privacy</a></p>
-        <button class="btn btn-blue" type="submit"><span class="en">Send</span><span class="it">Invia</span> →</button>
-        <p class="fmsg" id="fmsg" role="status"></p>
-        <p class="fine"><span class="en">Or email</span><span class="it">Oppure scrivi a</span> <a href="mailto:hello@lytostudio.com">hello@lytostudio.com</a></p>
-      </form>
-    </div>
-  </div>
-</section>
-
+</main>
 <footer>
-  <div class="wrap">
-    <span class="handle" style="font-size:16px;color:#fff"><span class="p">&gt;</span> lyto</span>
-    <div class="links">
-      <a href="https://www.instagram.com/mr.lyto/" target="_blank" rel="noopener">@mr.lyto</a>
-      <a href="https://www.instagram.com/ms.lyto/" target="_blank" rel="noopener">@ms.lyto</a>
-      <a href="https://www.instagram.com/the.lytos/" target="_blank" rel="noopener">@the.lytos</a>
-      <a href="https://lyto.online" target="_blank" rel="noopener">lyto.online</a>
-      <a href="mailto:hello@lytostudio.com">hello@lytostudio.com</a>
-    </div>
-    <span class="legal-f">© <span id="y">2026</span> Lyto · Erica Torta &amp; Abderrahman Lyassi · <span class="en">Turin, Italy</span><span class="it">Torino</span> · <a href="privacy.html">Privacy &amp; cookie<span class="en">s</span></a></span>
-  </div>
+<div class="wrap">
+<a class="handle" href="/it/">
+<span class="p">&gt;</span> lyto studio</a>
+<div class="links">
+<a href="mailto:hello@lytostudio.com">hello@lytostudio.com</a>
+<a href="https://www.instagram.com/ms.lyto/" target="_blank" rel="noopener">Instagram · Erica ↗</a>
+<a href="https://www.instagram.com/mr.lyto/" target="_blank" rel="noopener">Instagram · Abdo ↗</a>
+<a href="/privacy.html?lang=it">Privacy e cookie</a>
+</div>
+<p class="legal-f">© 2026 Lyto · Erica Torta &amp; Abderrahman Lyassi · Torino</p>
+</div>
 </footer>
-
-<script>
-(function(){
-  var root = document.documentElement;
-  function setLang(l, save){
-    root.classList.toggle('it', l === 'it');
-    root.lang = l;
-    document.title = l === 'it' ? 'Lyto Studio · Automazioni AI e siti per piccole attività' : 'Lyto Studio · AI automations & websites for small business';
-    document.querySelector('meta[name="description"]').content = l === 'it'
-      ? 'Agenti AI, automazioni e siti per piccole attività, da Torino. Prezzo fisso, data di consegna scritta, un solo referente. Prima chiamata di 20 minuti gratis.'
-      : 'AI agents, automations and websites for small businesses, from Turin. Fixed price, delivery date in writing, one person to talk to. Free 20-min call.';
-    document.querySelector('link[rel="canonical"]').href = l === 'it' ? 'https://lytostudio.com/?lang=it' : 'https://lytostudio.com/';
-    document.querySelectorAll('.lang button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.lang === l); });
-    document.querySelectorAll('option[data-en]').forEach(function(o){ o.textContent = o.dataset[l]; });
-    if (save) { try { localStorage.setItem('lyto-lang', l); } catch(e){} }
-  }
-  // ?lang= in the link > saved choice > browser language
-  var q = new URLSearchParams(location.search).get('lang'), saved = null;
-  try { saved = localStorage.getItem('lyto-lang'); } catch(e){}
-  var nav = (navigator.language || '').toLowerCase().indexOf('it') === 0 ? 'it' : 'en';
-  setLang(q === 'it' || q === 'en' ? q : (saved || nav), false);
-  document.querySelectorAll('.lang button').forEach(function(b){
-    b.addEventListener('click', function(){ setLang(b.dataset.lang, true); });
-  });
-
-  // booking: Cal.com popup, loaded only on the first click (no third-party requests before that)
-  var CAL_LINK = 'lyto-studio/20min'; // e.g. 'lyto/20min' from cal.com/lyto/20min; empty = buttons scroll to #contact
-  if (CAL_LINK) {
-    document.querySelector('.book-row').hidden = false;
-    var calReady = false;
-    function openCal(){
-      if (!calReady) {
-        (function (C, A, L) { var p = function (a, ar) { a.q.push(ar); }; var d = C.document; C.Cal = C.Cal || function () { var cal = C.Cal; var ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement('script')).src = A; cal.loaded = true; } if (ar[0] === L) { var api = function () { p(api, arguments); }; var namespace = ar[1]; api.q = api.q || []; if (typeof namespace === 'string') { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ['initNamespace', namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, 'https://app.cal.com/embed/embed.js', 'init');
-        Cal('init', 'call', { origin: 'https://cal.com' });
-        Cal.ns.call('ui', { theme: 'dark', cssVarsPerTheme: { dark: { 'cal-brand': '#0284C7' } }, layout: 'month_view' });
-        calReady = true;
-      }
-      Cal.ns.call('modal', { calLink: CAL_LINK, config: { layout: 'month_view', theme: 'dark' } });
-    }
-    document.querySelectorAll('[data-book]').forEach(function(b){
-      b.addEventListener('click', function(e){ e.preventDefault(); openCal(); });
-    });
-  }
-
-  // contact form: Formspree when FORM_ENDPOINT is set, otherwise opens the mail app
-  var FORM_ENDPOINT = ''; // e.g. https://formspree.io/f/xxxxxxx
-  var MAIL = 'hello@lytostudio.com';
-  var form = document.getElementById('cform'), msg = document.getElementById('fmsg');
-  function t(en, it){ return root.classList.contains('it') ? it : en; }
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    msg.className = 'fmsg';
-    if (!form.checkValidity()) { msg.classList.add('err'); msg.textContent = t('Please fill in name, a valid email and a few words about your business.', 'Compila nome, un\'email valida e due righe sulla tua attività.'); return; }
-    if (form._gotcha.value) return;
-    var d = new FormData(form), topic = form.topic.options[form.topic.selectedIndex].text;
-    d.set('topic', topic); d.set('lang', root.lang);
-    if (!FORM_ENDPOINT) {
-      var body = d.get('message') + '\n\n— ' + d.get('name') + ' · ' + d.get('email');
-      location.href = 'mailto:' + MAIL + '?subject=' + encodeURIComponent('Lyto · ' + topic) + '&body=' + encodeURIComponent(body);
-      return;
-    }
-    var btn = form.querySelector('button'); btn.disabled = true;
-    fetch(FORM_ENDPOINT, { method: 'POST', body: d, headers: { Accept: 'application/json' } })
-      .then(function(r){ if (!r.ok) throw r; form.reset(); msg.textContent = t('✓ Sent. We\'ll get back to you soon.', '✓ Inviato. Ti rispondiamo al più presto.'); })
-      .catch(function(){ msg.classList.add('err'); msg.textContent = t('Something went wrong. Write to ' + MAIL, 'Qualcosa è andato storto. Scrivi a ' + MAIL); })
-      .then(function(){ btn.disabled = false; });
-  });
-
-  // pricing tabs
-  document.querySelectorAll('.tabs button').forEach(function(t){
-    t.addEventListener('click', function(){
-      document.querySelectorAll('.tabs button').forEach(function(x){ x.setAttribute('aria-selected', x === t); });
-      document.querySelectorAll('.plans').forEach(function(p){ p.classList.toggle('on', p.dataset.panel === t.dataset.tab); });
-    });
-  });
-
-  // terminal: an example automation, typed line by line
-  var logs = {
-    en: [
-      ['t','09:02'],['w',' new email from '],['a','mario@studio-rossi.it'],['n',''],
-      ['t','09:02'],['w',' → reads the request: '],['a','"quote for 3 rooms"'],['n',''],
-      ['t','09:03'],['w',' → drafts the quote from your price list'],['n',''],
-      ['t','09:03'],['w',' → sends it to you for approval'],['n',''],
-      ['t','09:11'],['g',' ✓ approved · sent · added to calendar'],['n',''],['n',''],
-      ['t','today '],['a','14 requests handled · ~3h saved'],['n','']
-    ],
-    it: [
-      ['t','09:02'],['w',' nuova email da '],['a','mario@studio-rossi.it'],['n',''],
-      ['t','09:02'],['w',' → legge la richiesta: '],['a','"preventivo 3 stanze"'],['n',''],
-      ['t','09:03'],['w',' → prepara il preventivo dal tuo listino'],['n',''],
-      ['t','09:03'],['w',' → te lo manda da approvare'],['n',''],
-      ['t','09:11'],['g',' ✓ approvato · inviato · messo in agenda'],['n',''],['n',''],
-      ['t','oggi  '],['a','14 richieste gestite · ~3h risparmiate'],['n','']
-    ]
-  };
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  Object.keys(logs).forEach(function(l){
-    var pre = document.getElementById('log-' + l), parts = logs[l], i = 0;
-    function add(){
-      if (i >= parts.length) return;
-      var p = parts[i++];
-      if (p[0] === 'n') pre.appendChild(document.createTextNode('\n'));
-      else { var s = document.createElement('span'); s.className = p[0]; s.textContent = p[1]; pre.appendChild(s); }
-      if (reduce) add(); else setTimeout(add, p[0] === 'n' ? 380 : 60);
-    }
-    add();
-  });
-
-  var els = document.querySelectorAll('.rv');
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function(es){
-      es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, {rootMargin: '0px 0px -8% 0px'});
-    els.forEach(function(el){ io.observe(el); });
-  } else { els.forEach(function(el){ el.classList.add('in'); }); }
-
-  document.getElementById('y').textContent = new Date().getFullYear();
-})();
-</script>
 </body>
 </html>
